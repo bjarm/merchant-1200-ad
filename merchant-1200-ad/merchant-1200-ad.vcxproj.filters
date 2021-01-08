@@ -18,6 +18,9 @@
     <ClCompile Include="game.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="MapObject.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="map.png">
@@ -30,6 +33,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObject.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

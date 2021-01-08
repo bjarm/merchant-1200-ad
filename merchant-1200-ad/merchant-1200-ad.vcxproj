@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="MapObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="map.png" />
@@ -152,6 +153,7 @@
     <None Include="shader.vs" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MapObject.h" />
     <ClInclude Include="Shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
