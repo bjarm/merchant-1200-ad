@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\libs\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\libs\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\serge\source\repos\W3dn3sd4y\merchant-1200-ad\libs\include;C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\libs\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\serge\source\repos\W3dn3sd4y\merchant-1200-ad\libs\lib;C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\libs\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -94,7 +94,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;glew32s.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>audiere.lib;glfw3.lib;opengl32.lib;glew32s.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,19 +142,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="audio.cpp" />
+    <ClCompile Include="database.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="MapObject.cpp" />
+    <ClCompile Include="shell.c" />
+    <ClCompile Include="sqlite3.c" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="map.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="gameDB.db" />
     <None Include="shader.frag" />
     <None Include="shader.vs" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="audiere.h" />
+    <ClInclude Include="audio.h" />
+    <ClInclude Include="database.h" />
     <ClInclude Include="MapObject.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="sqlite3.h" />
+    <ClInclude Include="sqlite3ext.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

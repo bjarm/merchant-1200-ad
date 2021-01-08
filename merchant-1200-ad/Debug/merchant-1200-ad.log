@@ -1,2 +1,56 @@
-﻿  MapObject.cpp
-  merchant-1200-ad.vcxproj -> C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\merchant-1200-ad\Debug\merchant-1200-ad.exe
+﻿  audio.cpp
+C:\Users\serge\source\repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\audio.cpp(29,20): warning C4018: <: несоответствие типов со знаком и без знака
+  database.cpp
+C:\Users\serge\source\repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\database.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  game.cpp
+  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: rotate_slow function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: perspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: perspectiveFov function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: infinitePerspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: tweakedInfinitePerspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: roll function returning degrees is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: pitch function returning degrees is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: yaw function returning degrees is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: angle function returning degrees is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: angleAxis function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  MapObject.cpp
+  Создание кода...
+  shell.c
+  sqlite3.c
+  Создание кода...
+LINK : warning LNK4067: неоднозначная точка входа; выбрана "mainCRTStartup"
+LINK : warning LNK4098: библиотека по умолчанию "MSVCRT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+LINK : warning LNK4098: библиотека по умолчанию "LIBCMT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+LINK : warning LNK4217: Символ "___glewActiveTexture", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: void __thiscall MapObject::drawObject(void)" (?drawObject@MapObject@@QAEXXZ)".
+LINK : warning LNK4217: Символ "___glewBindBuffer", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: __thiscall MapObject::MapObject(float,float,float,float,char *)" (??0MapObject@@QAE@MMMMPAD@Z)".
+LINK : warning LNK4217: Символ "___glewBufferData", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: __thiscall MapObject::MapObject(float,float,float,float,char *)" (??0MapObject@@QAE@MMMMPAD@Z)".
+LINK : warning LNK4217: Символ "___glewDeleteBuffers", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: void __thiscall MapObject::cleanObject(void)" (?cleanObject@MapObject@@QAEXXZ)".
+LINK : warning LNK4217: Символ "___glewGenBuffers", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: __thiscall MapObject::MapObject(float,float,float,float,char *)" (??0MapObject@@QAE@MMMMPAD@Z)".
+LINK : warning LNK4217: Символ "___glewAttachShader", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewCompileShader", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewCreateProgram", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewCreateShader", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewDeleteShader", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewEnableVertexAttribArray", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: __thiscall MapObject::MapObject(float,float,float,float,char *)" (??0MapObject@@QAE@MMMMPAD@Z)".
+LINK : warning LNK4217: Символ "___glewGetProgramInfoLog", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewGetProgramiv", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewGetShaderInfoLog", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewGetShaderiv", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewGetUniformLocation", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: void __thiscall MapObject::drawObject(void)" (?drawObject@MapObject@@QAEXXZ)".
+LINK : warning LNK4217: Символ "___glewLinkProgram", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewShaderSource", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции "__catch$??0Shader@@QAE@PBD0@Z$0".
+LINK : warning LNK4217: Символ "___glewUniform1i", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: void __thiscall MapObject::drawObject(void)" (?drawObject@MapObject@@QAEXXZ)".
+LINK : warning LNK4217: Символ "___glewUseProgram", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: void __thiscall Shader::Use(void)" (?Use@Shader@@QAEXXZ)".
+LINK : warning LNK4217: Символ "___glewVertexAttribPointer", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: __thiscall MapObject::MapObject(float,float,float,float,char *)" (??0MapObject@@QAE@MMMMPAD@Z)".
+LINK : warning LNK4217: Символ "___glewGenerateMipmap", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: __thiscall MapObject::MapObject(float,float,float,float,char *)" (??0MapObject@@QAE@MMMMPAD@Z)".
+LINK : warning LNK4217: Символ "___glewBindVertexArray", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: __thiscall MapObject::MapObject(float,float,float,float,char *)" (??0MapObject@@QAE@MMMMPAD@Z)".
+LINK : warning LNK4217: Символ "___glewDeleteVertexArrays", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: void __thiscall MapObject::cleanObject(void)" (?cleanObject@MapObject@@QAEXXZ)".
+LINK : warning LNK4217: Символ "___glewGenVertexArrays", определенный в "glew32s.lib(glew.obj)", импортирован "MapObject.obj" в функции ""public: __thiscall MapObject::MapObject(float,float,float,float,char *)" (??0MapObject@@QAE@MMMMPAD@Z)".
+glew32s.lib(glew.obj) : warning LNK4099: "vc120.pdb" PDB не найден с "glew32s.lib(glew.obj)" или на "C:\Users\serge\Source\Repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\Debug\vc120.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+SOIL.lib(image_DXT.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "SOIL.lib(image_DXT.obj)" или на "C:\Users\serge\Source\Repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+SOIL.lib(image_helper.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "SOIL.lib(image_helper.obj)" или на "C:\Users\serge\Source\Repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+SOIL.lib(SOIL.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "SOIL.lib(SOIL.obj)" или на "C:\Users\serge\Source\Repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+SOIL.lib(stb_image_aug.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "SOIL.lib(stb_image_aug.obj)" или на "C:\Users\serge\Source\Repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+  merchant-1200-ad.vcxproj -> C:\Users\serge\Source\Repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\Debug\merchant-1200-ad.exe
