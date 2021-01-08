@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\ratatoskr\xiii-merchant\libs\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\ratatoskr\xiii-merchant\libs\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\libs\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\libs\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
