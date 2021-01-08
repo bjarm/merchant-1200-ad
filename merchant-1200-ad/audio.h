@@ -7,6 +7,11 @@
 #define SOUND_BOWS     "sounds/sound2.mp3"
 #define SOUND_CROSSBOW "sounds/sound1.mp3"
 
+struct line{
+	audiere::OutputStreamPtr sound;
+	std::string filename;
+};
+
 class Audio
 {
 public:
@@ -16,7 +21,6 @@ public:
 	void stopAllSound();
 private:
 	audiere::AudioDevicePtr device = audiere::OpenDevice();
-	std::vector <audiere::OutputStreamPtr> sounds;
-
+	std::vector <line> sounds;
 };
 
