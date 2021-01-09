@@ -1,19 +1,20 @@
 #include "MapObject.h"
 
-MapObject::MapObject(GLfloat x, GLfloat y, GLfloat width, GLfloat height, char* path)
+MapObject::MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height, char* path)
 {
-	coordX = x;
-	coordY = y;
-	objWidth = width;
-	objHeight = height;
+	coordX = x / 800;
+	coordY = y / 600;
+	coordZ = z;
+	objWidth = width / 800;		// Replace with parcer/libconfig
+	objHeight = height / 600;
 	texturePath = path;
 
 	GLfloat vertices[] = {
-		// Позиции													// Текстурные координаты
-		 (coordX + objWidth / 2),  (coordY - objHeight / 2), 0.0f,  1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // Верхний правый
-		 (coordX + objWidth / 2),  (coordY + objHeight / 2), 0.0f,  0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // Нижний правый
-		 (coordX - objWidth / 2),  (coordY + objHeight / 2), 0.0f,  0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // Нижний левый
-	 	 (coordX - objWidth / 2),  (coordY - objHeight / 2), 0.0f,  1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // Верхний левый
+		 // Position											    // Color			// Texture
+		 (coordX + objWidth / 2),  (coordY - objHeight / 2), coordZ,  1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // Top right
+		 (coordX + objWidth / 2),  (coordY + objHeight / 2), coordZ,  0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // Bottom right
+		 (coordX - objWidth / 2),  (coordY + objHeight / 2), coordZ,  0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // Botttom left
+	 	 (coordX - objWidth / 2),  (coordY - objHeight / 2), coordZ,  1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // Top left
 	};
 
 	GLuint indices[] = {
@@ -45,13 +46,11 @@ MapObject::MapObject(GLfloat x, GLfloat y, GLfloat width, GLfloat height, char* 
 	glGenTextures(1, &texture);
 	glBindTexture(GL_TEXTURE_2D, texture);
 
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
-	float borderColor[] = { 1.0f, 1.0f, 0.0f, 1.0f };
-	glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
-	unsigned char* image = SOIL_load_image(texturePath, &tWidth, &tHeight, 0, SOIL_LOAD_RGB);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, tWidth, tHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
+	unsigned char* image = SOIL_load_image(texturePath, &tWidth, &tHeight, 0, SOIL_LOAD_RGBA);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, tWidth, tHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
 	glGenerateMipmap(GL_TEXTURE_2D);
 
 	SOIL_free_image_data(image);
@@ -61,6 +60,7 @@ MapObject::MapObject(GLfloat x, GLfloat y, GLfloat width, GLfloat height, char* 
 void MapObject::drawObject()
 {
 	glActiveTexture(GL_TEXTURE0);
+	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glUniform1i(glGetUniformLocation(objShader.Program, "texture"), 0);
 

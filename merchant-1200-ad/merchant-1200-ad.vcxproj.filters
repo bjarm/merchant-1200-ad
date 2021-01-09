@@ -33,9 +33,15 @@
     <ClCompile Include="sqlite3.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="City.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="map.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="large_city.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>
@@ -66,6 +72,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sqlite3ext.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="City.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

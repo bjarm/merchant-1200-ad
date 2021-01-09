@@ -11,13 +11,13 @@
 class MapObject
 {
 public:
-	GLfloat coordX, coordY, objWidth, objHeight;
+	GLfloat coordX, coordY, coordZ, objWidth, objHeight;
 	GLuint VBO, VAO, EBO, texture;
 	char* texturePath;
 	Shader objShader = Shader("shader.vs", "shader.frag");
 
 
-	MapObject(GLfloat x, GLfloat y, GLfloat width, GLfloat height, char* path); 
+	MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height, char* path);
 
 	void drawObject();
 
