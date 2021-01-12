@@ -2,11 +2,11 @@
 
 MapObject::MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height, char* path)
 {
-	coordX = x / 800;
-	coordY = y / 600;
+	coordX = x / 600;
+	coordY = y / 450;
 	coordZ = z;
-	objWidth = width / 800;		// Replace with parcer/libconfig
-	objHeight = height / 600;
+	objWidth = width / 600;		// Replace with parcer/libconfig
+	objHeight = height / 450;
 	texturePath = path;
 
 	GLfloat vertices[] = {
