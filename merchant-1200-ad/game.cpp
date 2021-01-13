@@ -51,6 +51,8 @@ int main()
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glViewport(0, 0, WIDTH, HEIGHT);
 	
+	// cities vector;
+	
 	// Create screen objects
 	MapObject Map((GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)WIDTH, (GLfloat)HEIGHT, (char*)"map.png");
 	City Novgorod((GLfloat)125.0f, (GLfloat)50.0f, (GLfloat)-1.0f, (GLfloat)120, (GLfloat)75, (char*)"large_city.png");
@@ -91,6 +93,8 @@ bool isInsideRectangle(double x0, double y0, City city) {
 	width = city.objWidth * 600 / 2;
 	height = city.objHeight * 450 / 2;
 
+	//std::cout<<"city " << x << " " << y << " " << std::endl;
+
 	return (x0 < x + width && x0 > x - width && y0 < y + height && y0 > y - height);
 }
 
@@ -105,17 +109,11 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
 		double xpos, ypos;
 		glfwGetCursorPos(window, &xpos, &ypos);
+		//std::cout << xpos << " " << ypos << std::endl;
 		for (City city : cities) {
+			//std::cout << city.coordX << " " << city.coordY << std::endl;
 			if (isInsideRectangle(xpos, ypos, city))
-				std::cerr << "it is city" << std::endl;
-		}
-	}
-	if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS) {
-		double xpos, ypos;
-		glfwGetCursorPos(window, &xpos, &ypos);
-		for (City city : cities) {
-			if (isInsideRectangle(xpos, ypos, city))
-				std::cerr << "GO to this city" << std::endl;
+				std::cout << "it is Novgorod";
 		}
 	}
 }
