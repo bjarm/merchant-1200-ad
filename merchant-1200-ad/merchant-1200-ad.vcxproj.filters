@@ -36,12 +36,21 @@
     <ClCompile Include="City.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="map.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
     <Image Include="large_city.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="city_window.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="button_exit.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>
@@ -78,6 +87,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="game.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="audio.cpp" />
     <ClCompile Include="City.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="database.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="MapObject.cpp" />
@@ -151,6 +152,8 @@
     <ClCompile Include="sqlite3.c" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="button_exit.png" />
+    <Image Include="city_window.png" />
     <Image Include="large_city.png" />
     <Image Include="map.png" />
   </ItemGroup>
@@ -163,6 +166,7 @@
     <ClInclude Include="audiere.h" />
     <ClInclude Include="audio.h" />
     <ClInclude Include="City.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="database.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="MapObject.h" />

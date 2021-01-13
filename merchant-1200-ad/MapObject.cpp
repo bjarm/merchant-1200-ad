@@ -1,6 +1,6 @@
 #include "MapObject.h"
 
-MapObject::MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height, char* path)
+MapObject::MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height, char* path, std::string name)
 {
 	coordX = x / 600;
 	coordY = y / 450;
@@ -8,6 +8,7 @@ MapObject::MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat hei
 	objWidth = width / 600;		// Replace with parcer/libconfig
 	objHeight = height / 450;
 	texturePath = path;
+	objName = name;
 
 	GLfloat vertices[] = {
 		 // Position											    // Color			// Texture

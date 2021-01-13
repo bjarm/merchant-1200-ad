@@ -4,6 +4,7 @@
 #include <string>
 
 #include <glew.h>
+#include <glfw3.h>
 #include <SOIL.h>
 
 #include "Shader.h"
@@ -14,10 +15,11 @@ public:
 	GLfloat coordX, coordY, coordZ, objWidth, objHeight;
 	GLuint VBO, VAO, EBO, texture;
 	char* texturePath;
+	std::string objName;
 	Shader objShader = Shader("shader.vs", "shader.frag");
 
-
-	MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height, char* path);
+	MapObject();
+	MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height, char* path, std::string name);
 
 	void drawObject();
 

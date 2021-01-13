@@ -9,10 +9,12 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
 #include "Shader.h"
 #include "MapObject.h"
 #include "City.h"
 #include "game.h"
+#include "Scene.h"
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
@@ -20,7 +22,18 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 int WIDTH = 1200;
 int HEIGHT = 900;
 
+enum Scenes
+{
+	MAP_SCENE,
+	CITY_SCENE,
+};
+
 std::vector<City> cities;
+Scene mainScene;
+Scene mapScene;
+Scene winScene;
+
+Scenes activeScene;
 
 int main()
 {	
@@ -54,9 +67,21 @@ int main()
 	// cities vector;
 	
 	// Create screen objects
-	MapObject Map((GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)WIDTH, (GLfloat)HEIGHT, (char*)"map.png");
-	City Novgorod((GLfloat)125.0f, (GLfloat)50.0f, (GLfloat)-1.0f, (GLfloat)120, (GLfloat)75, (char*)"large_city.png");
-	cities.push_back(Novgorod);
+	MapObject map((GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)WIDTH, (GLfloat)HEIGHT, (char*)"map.png", "MAP");
+	mapScene.addObject(map);
+	City novgorod((GLfloat)125.0f, (GLfloat)50.0f, (GLfloat)-0.1f, (GLfloat)120, (GLfloat)75, (char*)"large_city.png", "NOVGOROD");
+	mapScene.addObject(novgorod);
+	cities.push_back(novgorod);
+
+
+	MapObject cityWindow((GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)-0.2f, (GLfloat)600, (GLfloat)450, (char*)"city_window.png", "WINDOW_BACKGROUND");
+	MapObject cityWindowExitButton((GLfloat)275.0f, (GLfloat)200.0f, (GLfloat)-0.25f, (GLfloat)30, (GLfloat)30, (char*)"button_exit.png", "WINDOW_EXIT");
+
+	winScene.addObject(cityWindow);
+	winScene.addObject(cityWindowExitButton);
+
+	mainScene = mapScene;
+	activeScene = MAP_SCENE;
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -65,20 +90,22 @@ int main()
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		Map.drawObject();
-		Novgorod.drawObject();
-
+		for (MapObject object : mainScene.peekScene()) 
+		{
+			object.drawObject();
+		}
 		glfwSwapBuffers(window);
 	}
-
-	Map.cleanObject();
-	Novgorod.cleanObject();
+	for (MapObject object : mainScene.peekScene())
+	{
+		object.cleanObject();
+	}
 
 	glfwTerminate();
 	return 0;
 }
 
-bool isInsideRectangle(double x0, double y0, City city) {
+bool isInsideRectangle(double x0, double y0, MapObject city) {
 
 	double x, y, width, height;
 	if (city.coordX < 0)
@@ -93,7 +120,6 @@ bool isInsideRectangle(double x0, double y0, City city) {
 	width = city.objWidth * 600 / 2;
 	height = city.objHeight * 450 / 2;
 
-	//std::cout<<"city " << x << " " << y << " " << std::endl;
 
 	return (x0 < x + width && x0 > x - width && y0 < y + height && y0 > y - height);
 }
@@ -106,14 +132,33 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 {
-	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && activeScene == MAP_SCENE) 
+	{
 		double xpos, ypos;
 		glfwGetCursorPos(window, &xpos, &ypos);
-		//std::cout << xpos << " " << ypos << std::endl;
+
 		for (City city : cities) {
-			//std::cout << city.coordX << " " << city.coordY << std::endl;
-			if (isInsideRectangle(xpos, ypos, city))
-				std::cout << "it is Novgorod";
+
+			if (isInsideRectangle(xpos, ypos, city)) 
+			{
+				mainScene = winScene;
+				activeScene = CITY_SCENE;
+			}
+		}
+	}
+
+	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && activeScene == CITY_SCENE)
+	{
+		double xpos, ypos;
+		glfwGetCursorPos(window, &xpos, &ypos);
+
+		for (MapObject object : mainScene.peekScene())
+		{
+			if (object.objName == "WINDOW_EXIT" && isInsideRectangle(xpos, ypos, object))
+			{
+				mainScene = mapScene;
+				activeScene = MAP_SCENE;
+			}
 		}
 	}
 }
