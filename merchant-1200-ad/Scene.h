@@ -18,6 +18,10 @@ public:
 
 	void addObject(MapObject newObject);
 
+	void drawScene();
+
+	void cleanScene();
+
 	std::vector<MapObject> peekScene();
 
 private:

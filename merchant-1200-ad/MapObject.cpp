@@ -78,3 +78,22 @@ void MapObject::cleanObject()
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &EBO);
 }
+
+bool MapObject::isInsideRectangle(double x0, double y0) {
+
+	double x, y, width, height;
+	if (coordX < 0)
+		x = (coordX + 1) * 600;
+	else
+		x = (coordX + 1) * 600;
+	if (coordY < 0)
+		y = (coordY * -1 + 1) * 450;
+	else
+		y = (1 - coordY) * 450;
+
+	width = objWidth * 600 / 2;
+	height = objHeight * 450 / 2;
+
+
+	return (x0 < x + width && x0 > x - width && y0 < y + height && y0 > y - height);
+}

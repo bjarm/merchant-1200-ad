@@ -21,6 +21,8 @@ public:
 	MapObject();
 	MapObject(GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height, char* path, std::string name);
 
+	bool isInsideRectangle(double x0, double y0);
+
 	void drawObject();
 
 	void cleanObject();
