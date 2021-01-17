@@ -26,6 +26,8 @@ public:
 	void drawObject();
 
 	void cleanObject();
+
+	void moveObject(GLfloat x, GLfloat y, GLfloat speed);
 };
 
 #endif

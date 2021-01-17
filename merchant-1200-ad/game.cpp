@@ -63,16 +63,57 @@ int main()
 		return -1;
 	}
 	glEnable(GL_BLEND);
+	glEnable(GL_DEPTH_TEST);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glViewport(0, 0, WIDTH, HEIGHT);
 	
 	// Create screen objects
-	MapObject map((GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)WIDTH, (GLfloat)HEIGHT, (char*)"map.png", "MAP");
+	// Creating map
+	MapObject map((GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)WIDTH, (GLfloat)HEIGHT, (char*)"map_filled.png", "MAP");
 	mapScene.addObject(map);
-	City novgorod((GLfloat)125.0f, (GLfloat)50.0f, (GLfloat)-0.1f, (GLfloat)120, (GLfloat)75, (char*)"large_city.png", "NOVGOROD");
+	// Creating large cities
+	City novgorod((GLfloat)100.0f, (GLfloat)35.0f, (GLfloat)-0.1f, (GLfloat)110, (GLfloat)65, (char*)"large_city.png", "NOVGOROD");
 	mapScene.addObject(novgorod);
-	cities.push_back(novgorod);
+	City pskov((GLfloat)-30.0f, (GLfloat)-75.0f, (GLfloat)-0.1f, (GLfloat)110, (GLfloat)65, (char*)"large_city.png", "PSKOV");
+	mapScene.addObject(pskov);
+	City narva((GLfloat)-35.0f, (GLfloat)115.0f, (GLfloat)-0.1f, (GLfloat)110, (GLfloat)65, (char*)"large_city.png", "NARVA");
+	mapScene.addObject(narva);
+	City toropetz((GLfloat)150.0f, (GLfloat)-180.0f, (GLfloat)-0.1f, (GLfloat)110, (GLfloat)65, (char*)"large_city.png", "TOROPETZ");
+	mapScene.addObject(toropetz);
+	City vitebsk((GLfloat)120.0f, (GLfloat)-350.0f, (GLfloat)-0.1f, (GLfloat)110, (GLfloat)65, (char*)"large_city.png", "VITEBSK");
+	mapScene.addObject(vitebsk);
+	City polotzk((GLfloat)-40.0f, (GLfloat)-265.0f, (GLfloat)-0.1f, (GLfloat)110, (GLfloat)65, (char*)"large_city.png", "POLOTZK");
+	mapScene.addObject(polotzk);
+	City riga((GLfloat)-310.0f, (GLfloat)-170.0f, (GLfloat)-0.1f, (GLfloat)110, (GLfloat)65, (char*)"large_city.png", "RIGA");
+	mapScene.addObject(riga);
+	// Creating small cities
+	City ladoga((GLfloat)195.0f, (GLfloat)185.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "LADOGA");
+	mapScene.addObject(ladoga);
+	City rusa((GLfloat)110.0f, (GLfloat)-40.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "RUSA");
+	mapScene.addObject(rusa);
+	City luki((GLfloat)90.0f, (GLfloat)-240.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "LUKI");
+	mapScene.addObject(luki);
+	City torzhok((GLfloat)390.0f, (GLfloat)-150.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "TORZHOK");
+	mapScene.addObject(torzhok);
+	City rzhev((GLfloat)360.0f, (GLfloat)-240.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "RZHEV");
+	mapScene.addObject(rzhev);
+	City druzk((GLfloat)-150.0f, (GLfloat)-300.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "DRUZK");
+	mapScene.addObject(druzk);
+	City izborsk((GLfloat)-145.0f, (GLfloat)-110.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "IZBORSK");
+	mapScene.addObject(izborsk);
+	City derpth((GLfloat)-170.0f, (GLfloat)0.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "DERPTH");
+	mapScene.addObject(derpth);
+	City vezenberg((GLfloat)-185.0f, (GLfloat)100.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "VEZENBERG");
+	mapScene.addObject(vezenberg);
+	City reval((GLfloat)-285.0f, (GLfloat)115.0f, (GLfloat)-0.1f, (GLfloat)70, (GLfloat)40, (char*)"small_city.png", "REVAL");
+	mapScene.addObject(reval);
+	
+	/*MapObject mainCharacter((GLfloat)120.0f, (GLfloat)40.0f, (GLfloat)-0.11f, (GLfloat)50, (GLfloat)75, (char*)"mc.png", "MAIN_CHARACTER");
+	mapScene.addObject(mainCharacter);*/
 
+	cities.insert(cities.end(), { novgorod, pskov, narva, toropetz, vitebsk, polotzk, riga,
+		ladoga, rusa, luki, torzhok, rzhev, druzk, izborsk, derpth, vezenberg, reval });
+	
 	mainScene = mapScene;
 	activeScene = MAP_SCENE;
 
@@ -101,19 +142,19 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 {
+	double xpos, ypos;
+	glfwGetCursorPos(window, &xpos, &ypos);
+
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && activeScene == MAP_SCENE) 
 	{
-		double xpos, ypos;
-		glfwGetCursorPos(window, &xpos, &ypos);
-
 		for (City city : cities) {
 
 			if (city.isInsideRectangle(xpos, ypos)) 
 			{
 				Scene winScene;
 
-				MapObject cityWindow((GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)-0.2f, (GLfloat)600, (GLfloat)450, (char*)"city_window.png", "WINDOW_BACKGROUND");
-				MapObject cityWindowExitButton((GLfloat)275.0f, (GLfloat)200.0f, (GLfloat)-0.25f, (GLfloat)30, (GLfloat)30, (char*)"button_exit.png", "WINDOW_EXIT");
+				MapObject cityWindow((GLfloat)0.0f, (GLfloat)0.0f, (GLfloat)-0.2f, (GLfloat)900, (GLfloat)650, (char*)"city_window.png", "WINDOW_BACKGROUND");
+				MapObject cityWindowExitButton((GLfloat)420.0f, (GLfloat)295.0f, (GLfloat)-0.25f, (GLfloat)30, (GLfloat)30, (char*)"button_exit.png", "WINDOW_EXIT");
 
 				winScene.addObject(cityWindow);
 				winScene.addObject(cityWindowExitButton);
@@ -128,15 +169,25 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && activeScene == CITY_SCENE)
 	{
-		double xpos, ypos;
-		glfwGetCursorPos(window, &xpos, &ypos);
-
 		for (MapObject object : mainScene.peekScene())
 		{
 			if (object.objName == "WINDOW_EXIT" && object.isInsideRectangle(xpos, ypos))
 			{
 				mainScene = mapScene;
 				activeScene = MAP_SCENE;
+			}
+		}
+	}
+	if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS && activeScene == MAP_SCENE)
+	{
+		for (MapObject object : mainScene.peekScene())
+		{
+			double clickX, clickY;
+			clickX = xpos;
+			clickY = ypos;
+			if (object.objName == "MAIN_CHARACTER")
+			{
+				//object.moveObject(clickX, clickY, 0.01f);
 			}
 		}
 	}
