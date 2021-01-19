@@ -47,7 +47,7 @@ void Audio::playSound(std::string filename, float volume, bool repited) {
 
 void Audio::stopSound(std::string filename) {
 
-	if(filename.size())
+	if(!filename.size())
 		for (int k = 0; k < sounds.size(); k++) {
 			if (sounds[k].sound->isPlaying())
 				sounds[k].sound->stop();

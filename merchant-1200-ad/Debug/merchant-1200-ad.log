@@ -2,18 +2,4 @@
 C:\Users\serge\source\repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\audio.cpp(20,20): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\serge\source\repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\audio.cpp(51,21): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\serge\source\repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\audio.cpp(55,20): warning C4018: <: несоответствие типов со знаком и без знака
-  game.cpp
-  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: rotate_slow function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: perspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: perspectiveFov function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: infinitePerspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: tweakedInfinitePerspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: roll function returning degrees is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: pitch function returning degrees is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: yaw function returning degrees is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: angle function returning degrees is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: angleAxis function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  Создание кода...
   merchant-1200-ad.vcxproj -> C:\Users\serge\Source\Repos\W3dn3sd4y\merchant-1200-ad\merchant-1200-ad\Debug\merchant-1200-ad.exe
