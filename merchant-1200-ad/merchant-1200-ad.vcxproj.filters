@@ -93,4 +93,8 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="sounds\sound1.mp3" />
+    <Media Include="sounds\sound2.mp3" />
+  </ItemGroup>
 </Project>

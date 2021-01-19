@@ -16,6 +16,7 @@
 #include "City.h"
 #include "game.h"
 #include "Scene.h"
+#include "audio.h"
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
@@ -36,6 +37,8 @@ Scene mainScene;
 Scene mapScene;
 
 Scenes activeScene;
+
+Audio sound;
 
 int main()
 {	
@@ -117,6 +120,8 @@ int main()
 	mainScene = mapScene;
 	activeScene = MAP_SCENE;
 
+	sound.playSound(SOUND_MAIN, 0.5f, true);
+
 	while (!glfwWindowShouldClose(window))
 	{
 		glfwPollEvents();
@@ -128,6 +133,7 @@ int main()
 		glfwSwapBuffers(window);
 	}
 	
+	sound.stopSound();
 	mainScene.cleanScene();
 
 	glfwTerminate();
@@ -161,6 +167,8 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 
 				std::string cityname = city.objName;
 
+				sound.playSound(SOUND_CITY, 1.0f, true);
+
 				mainScene = winScene;
 				activeScene = CITY_SCENE;
 			}
@@ -175,6 +183,8 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 			{
 				mainScene = mapScene;
 				activeScene = MAP_SCENE;
+
+				sound.stopSound(SOUND_CITY);
 			}
 		}
 	}
