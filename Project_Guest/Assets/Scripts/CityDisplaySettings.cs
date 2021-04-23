@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class CityDisplaySettings : MonoBehaviour
 {
     [SerializeField] private Button closeButton;
-    [SerializeField] private Text cityName;
-    public void Open()
+    [SerializeField] private Text cityNameText;
+
+    public void Open(string cityName)
     {
         gameObject.SetActive(true);
+        cityNameText.text = cityName;
+        
     }
     public void Close()
     {
@@ -24,6 +27,6 @@ public class CityDisplaySettings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
