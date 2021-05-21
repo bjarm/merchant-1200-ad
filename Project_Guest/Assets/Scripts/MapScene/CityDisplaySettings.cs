@@ -21,7 +21,7 @@ public class CityDisplaySettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Close();
     }
 
     // Update is called once per frame
