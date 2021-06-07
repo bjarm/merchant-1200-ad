@@ -18,7 +18,10 @@ public class City : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetMouseButtonDown(1))
+        {
+            GameObject.Find("Controllers").GetComponent<MovementController>().GoToCity(cityName);
+        }
     }
 
     void OnMouseUp()

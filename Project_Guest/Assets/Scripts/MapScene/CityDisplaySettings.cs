@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CityDisplaySettings : MonoBehaviour
 {
-    [SerializeField] private Button closeButton;
-    [SerializeField] private Text cityNameText;
+    public Button enterCityButton;
+    public Text cityNameText;
 
     public void Open(string cityName)
     {
@@ -21,7 +22,11 @@ public class CityDisplaySettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Close();
+        enterCityButton.onClick.AddListener(delegate
+        {
+            PlayerInfo.currentCity = cityNameText.text;
+            SceneManager.LoadScene("CityScene");
+        });
     }
 
     // Update is called once per frame

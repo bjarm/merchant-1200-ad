@@ -9,41 +9,28 @@ public class MarketController : MonoBehaviour
     public RectTransform prefab;
     public RectTransform content;
     public RectTransform productDisplay;
-    public GameObject playerGold;
-    public GameObject cityGold;
-    public string currentCity = "Novgorod"; // Добавить получение города из предыдущей сцены
+    public GameObject playerGoldPanel;
+    public GameObject cityGoldPanel;
 
-    void Start()
+    public string currentCity = PlayerInfo.currentCity; // Добавить получение города из предыдущей сцены
+
+    private void Start()
     {
         GenerateMarketList();
-    }
-
-    void Update()
-    {
-        playerGold.GetComponent<Text>().text = DataBase.ExecuteQueryWithAnswer("SELECT Gold FROM CityWarehouses WHERE City = 'Player'; ");
-        cityGold.GetComponent<Text>().text = DataBase.ExecuteQueryWithAnswer($"SELECT Gold FROM CityWarehouses WHERE City = '{currentCity}';");
     }
 
     public void GenerateMarketList()
     {
         OnReceivedModels(GetItems());
+        playerGoldPanel.GetComponent<Text>().text = DataBase.GetGoldAmount("Player").ToString();
+        cityGoldPanel.GetComponent<Text>().text = DataBase.GetGoldAmount(currentCity).ToString();
     }
 
     public class LocalProduct: Product
     {
-        private int cityAmount;
-        private int playerAmount;
+        public int CityAmount { get; set; }
 
-        public int CityAmount
-        {
-            get { return cityAmount; }
-            set { cityAmount = value; }
-        }
-        public int PlayerAmount
-        {
-            get { return playerAmount; }
-            set { playerAmount = value; }
-        }
+        public int PlayerAmount { get; set; }
     }
 
     public class MarketItem
@@ -62,9 +49,9 @@ public class MarketController : MonoBehaviour
         }
     }
 
-    void InitializeMarketItem(GameObject viewGameObject, LocalProduct model)
+    private void InitializeMarketItem(GameObject viewGameObject, LocalProduct model)
     {
-        MarketItem item = new MarketItem(viewGameObject.transform);
+        var item = new MarketItem(viewGameObject.transform);
         item.product.text = model.Name;
         item.value.text = model.ProductValue.ToString();
         item.cityAmount.text = model.CityAmount.ToString();
@@ -72,17 +59,17 @@ public class MarketController : MonoBehaviour
         viewGameObject.GetComponent<Button>().onClick.AddListener(delegate { GenerateProductDisplay(viewGameObject); });
     }
 
-    LocalProduct[] GetItems()
+    private LocalProduct[] GetItems()
     {
-        DataTable cityWarehouse = DataBase.GetTable($"SELECT * FROM CityWarehouses WHERE City = '{currentCity}';");
-        DataTable playerWarehouse = DataBase.GetTable("SELECT * FROM CityWarehouses WHERE City = 'Player';");
-        DataTable prices = DataBase.GetTable("SELECT * FROM Prices WHERE Type = 'Current price';");
+        var cityWarehouse = DataBase.GetProductTable(currentCity);
+        var playerWarehouse = DataBase.GetProductTable("Player");
+        var prices = DataBase.GetPricesTable(currentCity);
 
         var count = cityWarehouse.Columns.Count - 2;
         var results = new LocalProduct[count];
         var productNames = new string[] { "Bread", "Fur", "Salt", "Wine", "Herring" };
 
-        for (int i = 0; i < count; i++)
+        for (var i = 0; i < count; i++)
         {
             results[i] = new LocalProduct
             {
@@ -95,7 +82,7 @@ public class MarketController : MonoBehaviour
         return results;
     }
 
-    void OnReceivedModels(LocalProduct[] models)
+    private void OnReceivedModels(LocalProduct[] models)
     {
         foreach (Transform child in content)
         {
@@ -104,26 +91,51 @@ public class MarketController : MonoBehaviour
 
         foreach (var model in models)
         {
-            var instance = Instantiate(prefab.gameObject);
-            instance.transform.SetParent(content, false);
+            var instance = Instantiate(prefab.gameObject, content, false);
             InitializeMarketItem(instance, model);
         }
     }
 
     public void GenerateProductDisplay(GameObject marketItem)
     {
-        MarketItem parseMarketItem = new MarketItem(marketItem.transform);
-        productDisplay.Find("ProductName").GetComponent<Text>().text = parseMarketItem.product.text;
-        productDisplay.Find("AmountPanel").Find("Value").GetComponent<Text>().text = parseMarketItem.value.text;
-        productDisplay.Find("AmountPanel").Find("CityAmount").GetComponent<Text>().text = parseMarketItem.cityAmount.text;
-        productDisplay.Find("AmountPanel").Find("CaravanAmount").GetComponent<Text>().text = parseMarketItem.caravanAmount.text;
-        productDisplay.Find("BuyButton").GetComponent<Button>().onClick.AddListener(BuyEvent);
+        var parsedMarketItem = new MarketItem(marketItem.transform);
+        productDisplay.Find("ProductName").GetComponent<Text>().text = parsedMarketItem.product.text;
+        productDisplay.Find("AmountPanel").Find("Value").GetComponent<Text>().text = parsedMarketItem.value.text;
+        productDisplay.Find("AmountPanel").Find("CityAmount").GetComponent<Text>().text = parsedMarketItem.cityAmount.text;
+        productDisplay.Find("AmountPanel").Find("CaravanAmount").GetComponent<Text>().text = parsedMarketItem.caravanAmount.text;
+        productDisplay.Find("BuyButton").GetComponent<Button>().onClick.AddListener(delegate
+        {
+            TradeEvent(parsedMarketItem, "BUY_OPERATION"); 
+            CleanMess();
+        });
+        productDisplay.Find("SellButton").GetComponent<Button>().onClick.AddListener(delegate
+        {
+            TradeEvent(parsedMarketItem, "SELL_OPERATION"); 
+            CleanMess();
+        });
         productDisplay.gameObject.SetActive(true);
+
+        void CleanMess()
+        {
+            productDisplay.Find("BuyButton").GetComponent<Button>().onClick.RemoveAllListeners();
+            productDisplay.Find("SellButton").GetComponent<Button>().onClick.RemoveAllListeners();
+            productDisplay.gameObject.SetActive(false);
+        }
     }
 
-    public void BuyEvent()
+    public void TradeEvent(MarketItem marketItem, string type)
     {
-        int productAmount = int.Parse(productDisplay.Find("InputField").GetComponent<InputField>().text);
-
+        var tradeAmount = int.Parse(productDisplay.Find("InputField").GetComponent<InputField>().text);
+        var productType = marketItem.product.text;
+        switch (type)
+        {
+            case "BUY_OPERATION":
+                DataBase.TradeOperation(type, currentCity, productType, tradeAmount);
+                break;
+            case "SELL_OPERATION":
+                DataBase.TradeOperation(type, currentCity, productType, tradeAmount);
+                break;
+        }
+        GenerateMarketList();
     }
 }

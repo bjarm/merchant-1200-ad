@@ -15,44 +15,6 @@ public class CameraController : MonoBehaviour
 	private float tempHeight;
 	private bool L, R, U, D;
 
-	public void CursorTriggerEnter(string triggerName)
-	{
-		switch (triggerName)
-		{
-			case "L":
-				L = true;
-				break;
-			case "R":
-				R = true;
-				break;
-			case "U":
-				U = true;
-				break;
-			case "D":
-				D = true;
-				break;
-		}
-	}
-
-	public void CursorTriggerExit(string triggerName)
-	{
-		switch (triggerName)
-		{
-			case "L":
-				L = false;
-				break;
-			case "R":
-				R = false;
-				break;
-			case "U":
-				U = false;
-				break;
-			case "D":
-				D = false;
-				break;
-		}
-	}
-
 	// Start is called before the first frame update
 	void Start()
     {
