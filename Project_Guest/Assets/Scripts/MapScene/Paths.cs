@@ -6,11 +6,11 @@ using System;
 public class Paths : MonoBehaviour
 {
     Dictionary<Tuple<string, string>, List<Tuple<double, double>>> allWays = new Dictionary<Tuple<string, string>, List<Tuple<double, double>>>();
-
+    List<String> cities = new List<string>{ "Novgorod", "Riga" };
     public Paths() 
     {
-        addPath("Novgorod", "Riga", pushPointToPath(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16));
-        addPath("Riga", "Novgorod", pushPointToPath(-10.93, -5.29, -8, -4, -6, -2, -4, 0, -2, 0.5, 0, 1.5, 2, 1.9, 2.43, 1.8));
+        addPath("Novgorod", "Riga", pushPointToPath(2.43, 1.8, 0.6, 0.33, -1.13, -3.45, -2.58, -4.36, -4.44, -4.08, -6.48, -6.12, -8.4, -6.65, - 10.93, -5.29));
+        addPath("Riga", "Novgorod", pushPointToPath(-10.93, -5.29, -8.4, -6.65, -6.48, -6.12, -4.44, -4.08, -2.58, -4.36, -1.13, -3.45, 0.6, 0.33, 2.43, 1.8));
     }
     private void addPath(string city1, string city2, List<Tuple<double, double>> path) 
     {
@@ -33,11 +33,15 @@ public class Paths : MonoBehaviour
         return pathFromCity1ToCity2;
     }
 
-    public List<Tuple<double, double>> getWay(string city1, string city2) 
+    public List<Tuple<double, double>> getWay(string city1, string city2)
     {
-        return allWays[new Tuple<string, string>(city1, city2)]; 
+        if (cities.Contains(city1) && cities.Contains(city2))
+        {
+            return allWays[new Tuple<string, string>(city1, city2)];
+        }
+        else 
+        {
+            return null;
+        }
     }
-
-    
-    
 }

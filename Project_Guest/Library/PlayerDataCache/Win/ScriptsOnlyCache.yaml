@@ -3,16 +3,20 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Building
     - CameraController
+    - Character
     - City
     - CityDisplaySettings
     - CityScreenController
+    - FollowingByPath
     - MarketController
+    - MovementController
     - Player
     - PlayerInfo
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -81,7 +85,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2292}
     - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2486}
     - Class: 114
       Script: {instanceID: 2634}
     - Class: 114
@@ -105,9 +109,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4032}
     - Class: 114
-      Script: {instanceID: 4186}
+      Script: {instanceID: 4190}
     - Class: 114
-      Script: {instanceID: 4384}
+      Script: {instanceID: 4388}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -150,9 +154,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2110}
     - Class: 114
-      Script: {instanceID: 2482}
-    - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2486}
     - Class: 114
       Script: {instanceID: 2634}
     - Class: 114
@@ -166,9 +168,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3788}
     - Class: 114
-      Script: {instanceID: 4254}
+      Script: {instanceID: 4044}
     - Class: 114
-      Script: {instanceID: 5020}
+      Script: {instanceID: 4120}
+    - Class: 114
+      Script: {instanceID: 4258}
+    - Class: 114
+      Script: {instanceID: 4468}
+    - Class: 114
+      Script: {instanceID: 4584}
+    - Class: 114
+      Script: {instanceID: 5028}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -346,16 +356,16 @@ ScriptsOnlyBuild:
     className: EnumerableTestState
   - hash:
       serializedVersion: 2
-      Hash: c0eb920667eec1667297c49531a2453e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: City
-  - hash:
-      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Paths
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -646,6 +656,18 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
+      Hash: 58b11c56d1a6d68ab3c85889b8df5526
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovementController
+  - hash:
+      serializedVersion: 2
+      Hash: 2654c5cc9b8fbd81cef9cfdbe976b0b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Character
+  - hash:
+      serializedVersion: 2
       Hash: 3ee38dae950a2169533c65ccdabe70cc
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
@@ -724,6 +746,12 @@ ScriptsOnlyBuild:
     className: SpriteLibraryAsset
   - hash:
       serializedVersion: 2
+      Hash: c0eb920667eec1667297c49531a2453e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: City
+  - hash:
+      serializedVersion: 2
       Hash: 63bdc2cf3273aa9bf650350f19d2af61
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
@@ -740,6 +768,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 59fe8ea8c9235d2cec5c612b0d270a8f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FollowingByPath
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
