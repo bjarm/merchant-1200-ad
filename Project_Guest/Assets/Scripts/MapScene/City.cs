@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class City : MonoBehaviour
 {
-	[SerializeField] private CityDisplaySettings cityDisplay;
-
+	private MapSceneController mapSceneController;
+	
 	private string cityName;
 	private int cityPopulation;
 	private bool mouse;
@@ -13,8 +13,8 @@ public class City : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		mapSceneController = GameObject.Find("Controllers").GetComponent<MapSceneController>();
 		cityName = gameObject.name;
-        
 	}
 
 	// Update is called once per frame
@@ -28,7 +28,7 @@ public class City : MonoBehaviour
 
 	void OnMouseUp()
 	{
-		cityDisplay.Open(cityName);
+		mapSceneController.OpenCityDisplay();
 	}
 
 	void OnMouseEnter()

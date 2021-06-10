@@ -62,6 +62,7 @@ public class FollowingByPath : MonoBehaviour
 				onTheWay = false;
 				i = 1;
 				path.Clear();
+				EventManager.PlayerHasArrivedInTown.Publish();
 				return;
 			}
 			pointInPath = new Vector3((float)path[i].Item1, (float)path[i].Item2, 0);

@@ -43,24 +43,27 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\TrashScripts\CaravanDisplay\Player.cs" />
      <Compile Include="Assets\Scripts\MapScene\Paths.cs" />
-     <Compile Include="Assets\Scripts\Game Logic\DataBase.cs" />
-     <Compile Include="Assets\Scripts\Game Logic\Product.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\DataBase.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\Product.cs" />
+     <Compile Include="Assets\Scripts\CityScene\ExitCity.cs" />
      <Compile Include="Assets\Scripts\CityScene\CityScreenController.cs" />
      <Compile Include="Assets\Scripts\TrashScripts\CaravanDisplay\Item.cs" />
-     <Compile Include="Assets\Scripts\MapScene\CityDisplaySettings.cs" />
+     <Compile Include="Assets\Scripts\TrashScripts\CityDisplaySettings.cs" />
      <Compile Include="Assets\Scripts\TrashScripts\CaravanDisplay\SlotEvent.cs" />
      <Compile Include="Assets\Scripts\CityScene\Building.cs" />
      <Compile Include="Assets\Scripts\MapScene\MovementController.cs" />
      <Compile Include="Assets\Scripts\MapScene\Character.cs" />
-     <Compile Include="Assets\Scripts\Game Logic\PlayerInfo.cs" />
-     <Compile Include="Assets\Scripts\Game Logic\MarketController.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\PlayerInfo.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\MarketController.cs" />
      <Compile Include="Assets\Scripts\MapScene\City.cs" />
      <Compile Include="Assets\Scripts\TrashScripts\CaravanDisplay\ItemGenerator.cs" />
+     <Compile Include="Assets\Scripts\MapScene\MapSceneController.cs" />
      <Compile Include="Assets\Scripts\MapScene\FollowingByPath.cs" />
-     <Compile Include="Assets\Scripts\Game Logic\Economy.cs" />
+     <Compile Include="Assets\Scripts\MapScene\EventManager.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\Economy.cs" />
      <Compile Include="Assets\Scripts\TrashScripts\CaravanDisplay\Cargo.cs" />
      <Compile Include="Assets\Scripts\MapScene\CameraController.cs" />
-     <Compile Include="Assets\Scripts\CityScene\ExitCity.cs" />
+     <Compile Include="Assets\Scripts\MapScene\Events.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files (x86)/Unity/2021.1.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -292,11 +295,11 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:/Program Files (x86)/Unity/2021.1.4f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="Mono.Data.Sqlite">
-     <HintPath>C:/Users/ratatoskr/Documents/GitHub/merchant-1200-ad/Project_Guest/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
-     </Reference>
      <Reference Include="Mono.Data">
      <HintPath>C:/Users/ratatoskr/Documents/GitHub/merchant-1200-ad/Project_Guest/Assets/Plugins/Mono.Data.dll</HintPath>
+     </Reference>
+     <Reference Include="Mono.Data.Sqlite">
+     <HintPath>C:/Users/ratatoskr/Documents/GitHub/merchant-1200-ad/Project_Guest/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:/Program Files (x86)/Unity/2021.1.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

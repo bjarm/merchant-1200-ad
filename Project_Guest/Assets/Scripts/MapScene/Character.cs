@@ -17,4 +17,9 @@ public class Character : MonoBehaviour
     {
         
     }
+
+    public void HasArrivedInTown()
+    {
+        EventManager.PlayerHasArrivedInTown.Publish();
+    }
 }

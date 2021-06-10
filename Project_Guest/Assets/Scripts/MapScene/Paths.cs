@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Paths : MonoBehaviour
+public class Paths
 {
     Dictionary<Tuple<string, string>, List<Tuple<double, double>>> allWays = new Dictionary<Tuple<string, string>, List<Tuple<double, double>>>();
     List<String> cities = new List<string>{ "Novgorod", "Riga" };

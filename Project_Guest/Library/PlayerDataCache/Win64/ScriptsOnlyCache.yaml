@@ -5,10 +5,10 @@ ScriptsOnlyBuild:
     - CameraController
     - Character
     - City
-    - CityDisplaySettings
     - CityScreenController
     - ExitCity
     - FollowingByPath
+    - MapSceneController
     - MarketController
     - MovementController
     - Player
@@ -17,7 +17,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -78,43 +77,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1468}
+      Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 1700}
+      Script: {instanceID: 1472}
     - Class: 114
-      Script: {instanceID: 2110}
+      Script: {instanceID: 1474}
     - Class: 114
-      Script: {instanceID: 2292}
+      Script: {instanceID: 1476}
     - Class: 114
-      Script: {instanceID: 2486}
+      Script: {instanceID: 2298}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2640}
     - Class: 114
-      Script: {instanceID: 2858}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 3022}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 3028}
     - Class: 114
-      Script: {instanceID: 3126}
+      Script: {instanceID: 3036}
     - Class: 114
-      Script: {instanceID: 3262}
+      Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 3330}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 3474}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 4006}
+      Script: {instanceID: 3480}
     - Class: 114
-      Script: {instanceID: 4032}
+      Script: {instanceID: 4012}
     - Class: 114
-      Script: {instanceID: 4190}
+      Script: {instanceID: 4038}
     - Class: 114
-      Script: {instanceID: 4388}
+      Script: {instanceID: 4196}
     - Class: 114
-      Script: {instanceID: 64162}
+      Script: {instanceID: 4396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -153,35 +152,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1468}
+      Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 2110}
+      Script: {instanceID: 1472}
     - Class: 114
-      Script: {instanceID: 2486}
+      Script: {instanceID: 1474}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2640}
     - Class: 114
-      Script: {instanceID: 3022}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 3126}
+      Script: {instanceID: 3028}
     - Class: 114
-      Script: {instanceID: 3318}
+      Script: {instanceID: 3794}
     - Class: 114
-      Script: {instanceID: 3788}
+      Script: {instanceID: 4050}
     - Class: 114
-      Script: {instanceID: 4044}
+      Script: {instanceID: 4126}
     - Class: 114
-      Script: {instanceID: 4120}
+      Script: {instanceID: 4264}
     - Class: 114
-      Script: {instanceID: 4258}
+      Script: {instanceID: 4476}
     - Class: 114
-      Script: {instanceID: 4468}
+      Script: {instanceID: 4520}
     - Class: 114
-      Script: {instanceID: 4584}
+      Script: {instanceID: 4594}
     - Class: 114
-      Script: {instanceID: 5028}
+      Script: {instanceID: 5040}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -207,6 +206,24 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -275,12 +292,6 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: HorizontalLayoutGroup
-  - hash:
-      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -309,12 +320,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
-  - hash:
-      serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
@@ -363,12 +368,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Paths
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -479,6 +478,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExitCity
+  - hash:
+      serializedVersion: 2
       Hash: ca3c715b2b37e6685a9585341fed70f3
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
@@ -489,12 +494,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 69415240821be7986b27e72bf9609a30
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: 349d08daa6108b9a28f8c38fd40ce96f
@@ -749,7 +748,7 @@ ScriptsOnlyBuild:
     className: SpriteLibraryAsset
   - hash:
       serializedVersion: 2
-      Hash: c0eb920667eec1667297c49531a2453e
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: City
@@ -771,6 +770,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: c8c599b32089f7f9aff5763ab023d2da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MapSceneController
   - hash:
       serializedVersion: 2
       Hash: d43de596a4ff53626b1df465bee3d830
@@ -837,12 +842,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExitCity
   platform: 19
   scenePathNames:
   - Assets/Scenes/MapScene.unity
