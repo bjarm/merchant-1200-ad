@@ -13,10 +13,12 @@ ScriptsOnlyBuild:
     - MovementController
     - Player
     - PlayerInfo
+    - UIController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -158,6 +160,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1474}
     - Class: 114
+      Script: {instanceID: 1476}
+    - Class: 114
       Script: {instanceID: 2492}
     - Class: 114
       Script: {instanceID: 2640}
@@ -165,6 +169,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2812}
     - Class: 114
       Script: {instanceID: 3028}
+    - Class: 114
+      Script: {instanceID: 3480}
     - Class: 114
       Script: {instanceID: 3794}
     - Class: 114
@@ -178,9 +184,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4520}
     - Class: 114
-      Script: {instanceID: 4594}
+      Script: {instanceID: 4592}
     - Class: 114
       Script: {instanceID: 5040}
+    - Class: 114
+      Script: {instanceID: 19220}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -842,6 +850,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 610881b50116ab13fed9f2f4957e6188
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIController
   platform: 19
   scenePathNames:
   - Assets/Scenes/MapScene.unity

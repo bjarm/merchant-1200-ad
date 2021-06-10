@@ -62,8 +62,10 @@
      <Compile Include="Assets\Scripts\MapScene\EventManager.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Economy.cs" />
      <Compile Include="Assets\Scripts\TrashScripts\CaravanDisplay\Cargo.cs" />
-     <Compile Include="Assets\Scripts\MapScene\CameraController.cs" />
      <Compile Include="Assets\Scripts\MapScene\Events.cs" />
+     <Compile Include="Assets\Scripts\MapScene\CameraController.cs" />
+     <Compile Include="Assets\Scripts\MapScene\UIController.cs" />
+     <Compile Include="Assets\Scripts\MapScene\GameTime.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files (x86)/Unity/2021.1.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
