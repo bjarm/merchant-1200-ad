@@ -52,7 +52,7 @@
      <Compile Include="Assets\Scripts\MapScene\Character.cs" />
      <Compile Include="Assets\Scripts\MapScene\General\UIController.cs" />
      <Compile Include="Assets\Scripts\GameLogic\GameManager.cs" />
-     <Compile Include="Assets\Scripts\GameLogic\MarketController.cs" />
+     <Compile Include="Assets\Scripts\CityScene\MarketController.cs" />
      <Compile Include="Assets\Scripts\MapScene\City.cs" />
      <Compile Include="Assets\Scripts\MapScene\General\MapSceneController.cs" />
      <Compile Include="Assets\Scripts\MapScene\Movement\FollowingByPath.cs" />
@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\GameLogic\Economy.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Events.cs" />
      <Compile Include="Assets\Scripts\MapScene\General\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CityScene\CaravanController.cs" />
      <None Include="Assets\StreamingAssets\cities.json" />
      <None Include="Assets\StreamingAssets\saved_info.json" />
      <Reference Include="UnityEngine">
