@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CityScreenController : MonoBehaviour
@@ -25,5 +26,10 @@ public class CityScreenController : MonoBehaviour
     public void Close(GameObject display)
     {
         display.SetActive(false);
+    }
+
+    public void LeaveCity()
+    {
+        SceneManager.LoadScene("MapScene");
     }
 }

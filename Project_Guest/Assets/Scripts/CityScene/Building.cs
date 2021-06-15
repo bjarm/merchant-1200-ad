@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Building : MonoBehaviour
+public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private GameObject buildingDisplay;
 
@@ -17,9 +19,18 @@ public class Building : MonoBehaviour
     {
         
     }
-
-    void OnMouseUp()
+    public void OnPointerClick(PointerEventData eventData)
     {
         buildingDisplay.SetActive(true);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        transform.GetComponent<SpriteRenderer>().color = Color.yellow;
+    }
+    
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        transform.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

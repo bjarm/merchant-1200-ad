@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-
-    public string location;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.transform.position = new Vector3(GameManager.currentCity.cityCoordinates.x,
+            GameManager.currentCity.cityCoordinates.y, -5);
     }
 
     // Update is called once per frame

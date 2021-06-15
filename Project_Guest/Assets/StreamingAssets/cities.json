@@ -1,0 +1,16 @@
+{
+  "cities": [
+    {
+      "cityName": "Novgorod",
+      "cityCoordinates": {
+        "x": 2.43,
+        "y": 1.8
+      },
+      "listOfProductions": [
+        "Fur",
+        "Salt"
+      ],
+      "cityPopulation": 15000
+    }
+  ]
+}

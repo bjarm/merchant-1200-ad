@@ -1,9 +1,11 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Mono.Data.Sqlite;
 using System.Data;
 using System.IO;
 
-static class DataBase
+public static class DataBase
 {
     private const string FileName = "gameDB.db";
     private static readonly string DBPath;
@@ -93,18 +95,24 @@ static class DataBase
         return GetTable($"SELECT * FROM Prices WHERE City = '{cityName}';");
     }
 
-    public static int GetCurrentPrice(string city, string product)
+    public static double GetCurrentPrice(string city, string product)
     {
-        return int.Parse(ExecuteQueryWithAnswer($"SELECT {product} FROM Prices WHERE City = '{city}';"));
+        return double.Parse(ExecuteQueryWithAnswer($"SELECT {product} FROM Prices WHERE City = '{city}';"));
     }
-    public static void TradeOperation(string type, string city, string product, int delta)
+
+    public enum TradeOperationType
     {
-        var goldAmountForProducts = GetCurrentPrice(city, product) * delta;
+        BuyOperation,
+        SellOperation
+    }
+    public static void TradeOperation(TradeOperationType type, string city, string product, int delta)
+    {
+        var goldAmountForProducts = (int)GetCurrentPrice(city, product) * delta;
         
-        var buyCondition = (GetGoldAmount("Player") - goldAmountForProducts >= 0) && type == "BUY_OPERATION";
-        var sellCondition = (GetGoldAmount(city) - goldAmountForProducts >= 0) && type == "SELL_OPERATION";
-        var isEnoughProductsToTrade = ((GetProductAmount(city, product) > 0) && type == "BUY_OPERATION") || 
-                                      ((GetProductAmount("Player", product) > 0) && type == "SELL_OPERATION");
+        var buyCondition = (GetGoldAmount("Player") - goldAmountForProducts >= 0) && type == TradeOperationType.BuyOperation;
+        var sellCondition = (GetGoldAmount(city) - goldAmountForProducts >= 0) && type == TradeOperationType.SellOperation;
+        var isEnoughProductsToTrade = ((GetProductAmount(city, product) > 0) && type == TradeOperationType.BuyOperation) || 
+                                      ((GetProductAmount("Player", product) > 0) && type == TradeOperationType.SellOperation);
 
         if ((buyCondition || sellCondition) && isEnoughProductsToTrade)
         {
@@ -114,13 +122,13 @@ static class DataBase
             var newPlayerGoldAmount = GetGoldAmount("Player");
             switch (type)
             {
-                case "BUY_OPERATION":
+                case TradeOperationType.BuyOperation:
                     newCityAmount -= delta;
                     newCityGoldAmount += goldAmountForProducts;
                     newPlayerAmount += delta;
                     newPlayerGoldAmount -= goldAmountForProducts;
                     break;
-                case "SELL_OPERATION":
+                case TradeOperationType.SellOperation:
                     newCityAmount += delta;
                     newCityGoldAmount -= goldAmountForProducts;
                     newPlayerAmount -= delta;
@@ -131,6 +139,70 @@ static class DataBase
             ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET Gold = '{newCityGoldAmount}'  WHERE City = '{city}';");
             ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET {product} = '{newPlayerAmount}'  WHERE City = 'Player';");
             ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET Gold = '{newPlayerGoldAmount}'  WHERE City = 'Player';");
+        }
+    }
+
+    public static void BuildingTransfersGoods(string city, string product, int amount)
+    {
+        var newCityAmount = int.Parse(ExecuteQueryWithAnswer($"SELECT {product} FROM CityWarehouses WHERE City = '{city}';")) + amount;
+        ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET {product} = '{newCityAmount}'  WHERE City = '{city}';");
+    }
+
+    public static void PopulationConsumeGoods(string city, int amountOfDays)
+    {
+        foreach (var product in GetProductList())
+        {
+            var necessity =
+                double.Parse(
+                    ExecuteQueryWithAnswer($"SELECT Necessity FROM Productions WHERE Product_type = '{product}';"));
+            var consumption =
+                double.Parse(
+                    ExecuteQueryWithAnswer($"SELECT Consumption FROM Productions WHERE Product_type = '{product}';"));
+            var population = GetProductAmount(city, "Population");
+            var currentAmount = GetProductAmount(city, product);
+            var actualAmount = (int)(currentAmount - necessity * consumption * population * amountOfDays);
+            var currentGoldAmount = GetProductAmount(city, "Gold");
+            var actualGoldAmount =
+                (int)(currentGoldAmount + necessity * consumption * population * amountOfDays * GetCurrentPrice(city, product));
+            ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET {product} = '{actualAmount}'  WHERE City = '{city}';");
+            ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET 'Gold' = '{actualGoldAmount}'  WHERE City = '{city}';");
+        }
+        // Необходимо убрать возможность введения числа товара в минус
+    }
+
+    public static int GetPathLengthInDays(string fromCity, string toCity)
+    {
+        return int.Parse(ExecuteQueryWithAnswer($"SELECT {fromCity} FROM Roads WHERE City = '{toCity}';"));
+    }
+
+    public static int GetAmountOfProduction(string productType)
+    {
+        return int.Parse(ExecuteQueryWithAnswer($"SELECT Production_amount FROM Productions WHERE Product_type = '{productType}';"));
+    }
+
+    public static List<string> GetProductList()
+    {
+        var productList = new List<string>();
+        var productTable = GetTable("SELECT Product_type FROM Productions;");
+        foreach (DataRow row in productTable.Rows)
+        {
+            productList.Add(row[0].ToString());
+        }
+
+        return productList;
+    }
+
+    public static void UpdatePriceForCity(string city)
+    {
+        foreach (var product in GetProductList())
+        {
+            var necessity = float.Parse(ExecuteQueryWithAnswer($"SELECT Necessity FROM Productions WHERE Product_type = '{product}';"));
+            var consumption = float.Parse(ExecuteQueryWithAnswer($"SELECT Consumption FROM Productions WHERE Product_type = '{product}';"));
+            var producedAmount = GetAmountOfProduction(product);
+            var population = GetProductAmount(city, "Population");
+            var basePrice = GetCurrentPrice("Nominal", product);
+            var actualPrice = (necessity * consumption * population) / producedAmount * basePrice;
+            ExecuteQueryWithoutAnswer($"UPDATE Prices SET {product} = '{actualPrice}'  WHERE City = '{city}';");
         }
     }
 }
