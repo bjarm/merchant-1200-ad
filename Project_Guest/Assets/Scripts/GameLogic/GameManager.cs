@@ -24,11 +24,13 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        /*
+        
         if (instance == null)
         {
             instance = this;
-            currentCity = GameObject.Find("Riga").GetComponent<City>();
+            var loadedInfo = JsonUtility.FromJson<PlayerInfo>(System.IO.File.ReadAllText(jsonPath));
+            currentCity = GameObject.Find(loadedInfo.savedCityName).GetComponent<City>();
+            currentDate = new Date(loadedInfo.savedDay, loadedInfo.savedMonth, loadedInfo.savedYear);
         }
         else
         {
@@ -37,11 +39,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        */
-
-        var loadedInfo = JsonUtility.FromJson<PlayerInfo>(System.IO.File.ReadAllText(jsonPath));
-        currentCity = GameObject.Find(loadedInfo.savedCityName).GetComponent<City>();
-        currentDate = new Date(loadedInfo.savedDay, loadedInfo.savedMonth, loadedInfo.savedYear);
+        EventManager.DateChanged.Subscribe(currentDate.AddDays);
 
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using Mono.Data.Sqlite;
 using System.Data;
 using System.IO;
+using Events;
 
 public static class DataBase
 {
@@ -111,8 +112,8 @@ public static class DataBase
         
         var buyCondition = (GetGoldAmount("Player") - goldAmountForProducts >= 0) && type == TradeOperationType.BuyOperation;
         var sellCondition = (GetGoldAmount(city) - goldAmountForProducts >= 0) && type == TradeOperationType.SellOperation;
-        var isEnoughProductsToTrade = ((GetProductAmount(city, product) > 0) && type == TradeOperationType.BuyOperation) || 
-                                      ((GetProductAmount("Player", product) > 0) && type == TradeOperationType.SellOperation);
+        var isEnoughProductsToTrade = (((GetProductAmount(city, product) - delta) >= 0) && type == TradeOperationType.BuyOperation) || 
+                                      (((GetProductAmount("Player", product) - delta) >= 0) && type == TradeOperationType.SellOperation);
 
         if ((buyCondition || sellCondition) && isEnoughProductsToTrade)
         {
@@ -140,6 +141,19 @@ public static class DataBase
             ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET {product} = '{newPlayerAmount}'  WHERE City = 'Player';");
             ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET Gold = '{newPlayerGoldAmount}'  WHERE City = 'Player';");
         }
+        else if (!buyCondition && type == TradeOperationType.BuyOperation)
+        {
+            EventManager.OperationFailed.Publish("У вас недостаточно золота");
+        }
+        else if (!sellCondition && type == TradeOperationType.SellOperation)
+        {
+            EventManager.OperationFailed.Publish("У продавца недостаточно золота");
+        }
+        if (!isEnoughProductsToTrade)
+        {
+            EventManager.OperationFailed.Publish("Не хватает товара");
+        }
+        
     }
 
     public static void BuildingTransfersGoods(string city, string product, int amount)
@@ -161,11 +175,18 @@ public static class DataBase
             var population = GetProductAmount(city, "Population");
             var currentAmount = GetProductAmount(city, product);
             var actualAmount = (int)(currentAmount - necessity * consumption * population * amountOfDays);
-            var currentGoldAmount = GetProductAmount(city, "Gold");
-            var actualGoldAmount =
-                (int)(currentGoldAmount + necessity * consumption * population * amountOfDays * GetCurrentPrice(city, product));
-            ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET {product} = '{actualAmount}'  WHERE City = '{city}';");
-            ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET 'Gold' = '{actualGoldAmount}'  WHERE City = '{city}';");
+            if (actualAmount >= 0)
+            {
+                var currentGoldAmount = GetProductAmount(city, "Gold");
+                var actualGoldAmount =
+                    (int)(currentGoldAmount + necessity * consumption * population * amountOfDays * GetCurrentPrice(city, product));
+                ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET {product} = '{actualAmount}'  WHERE City = '{city}';");
+                ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET 'Gold' = '{actualGoldAmount}'  WHERE City = '{city}';");
+            }
+            else
+            {
+                // А надо ли?
+            }
         }
         // Необходимо убрать возможность введения числа товара в минус
     }
@@ -204,5 +225,11 @@ public static class DataBase
             var actualPrice = (necessity * consumption * population) / producedAmount * basePrice;
             ExecuteQueryWithoutAnswer($"UPDATE Prices SET {product} = '{actualPrice}'  WHERE City = '{city}';");
         }
+    }
+
+    public static void ChangePlayerGold(int delta)
+    {
+        var currentGold = GetGoldAmount("Player");
+        ExecuteQueryWithoutAnswer($"UPDATE CityWarehouses SET 'Gold' = '{currentGold + delta}'  WHERE City = 'Player';");
     }
 }

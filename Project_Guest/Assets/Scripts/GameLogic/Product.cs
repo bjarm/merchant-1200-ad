@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class Product
 {
-    private string name; // Название товара
-    private double productValue; // Стоимость
+    private string name; // РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР°
+    private double productValue; // РЎС‚РѕРёРјРѕСЃС‚СЊ
 
     public string Name
     {

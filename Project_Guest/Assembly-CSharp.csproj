@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\GameLogic\GameTime.cs" />
      <Compile Include="Assets\Scripts\MapScene\Movement\Paths.cs" />
      <Compile Include="Assets\Scripts\GameLogic\DataBase.cs" />
+     <Compile Include="Assets\Scripts\CityScene\CaravanController.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Product.cs" />
      <Compile Include="Assets\Scripts\CityScene\CityScreenController.cs" />
      <Compile Include="Assets\Scripts\CityScene\Building.cs" />
@@ -57,10 +58,11 @@
      <Compile Include="Assets\Scripts\MapScene\General\MapSceneController.cs" />
      <Compile Include="Assets\Scripts\MapScene\Movement\FollowingByPath.cs" />
      <Compile Include="Assets\Scripts\GameLogic\EventManager.cs" />
+     <Compile Include="Assets\Scripts\CityScene\TavernController.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Economy.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Events.cs" />
      <Compile Include="Assets\Scripts\MapScene\General\CameraController.cs" />
-     <Compile Include="Assets\Scripts\CityScene\CaravanController.cs" />
+     <Compile Include="Assets\Scripts\CityScene\MoveDisplay.cs" />
      <None Include="Assets\StreamingAssets\cities.json" />
      <None Include="Assets\StreamingAssets\saved_info.json" />
      <Reference Include="UnityEngine">

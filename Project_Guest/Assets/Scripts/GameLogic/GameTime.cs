@@ -7,7 +7,7 @@ public class GameTime : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        EventManager.DateChanged.Subscribe(ChangeDate);
+        
     }
 
     // Update is called once per frame

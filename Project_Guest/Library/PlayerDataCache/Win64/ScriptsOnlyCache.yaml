@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Building
     - CameraController
+    - CaravanController
     - Character
     - City
     - CityScreenController
@@ -12,7 +13,7 @@ ScriptsOnlyBuild:
     - MapSceneController
     - MarketController
     - MovementController
-    - Player
+    - TavernController
     - UIController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -85,41 +86,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1474}
     - Class: 114
-      Script: {instanceID: 1476}
+      Script: {instanceID: 1708}
     - Class: 114
-      Script: {instanceID: 1712}
+      Script: {instanceID: 2122}
     - Class: 114
-      Script: {instanceID: 2126}
+      Script: {instanceID: 2496}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 2644}
     - Class: 114
-      Script: {instanceID: 2504}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2652}
+      Script: {instanceID: 2868}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 2876}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3040}
+      Script: {instanceID: 3042}
     - Class: 114
-      Script: {instanceID: 3048}
+      Script: {instanceID: 3138}
     - Class: 114
-      Script: {instanceID: 3280}
+      Script: {instanceID: 3274}
     - Class: 114
-      Script: {instanceID: 3346}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 3490}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 3624}
+      Script: {instanceID: 3616}
     - Class: 114
-      Script: {instanceID: 4022}
+      Script: {instanceID: 4012}
     - Class: 114
-      Script: {instanceID: 4048}
+      Script: {instanceID: 4038}
     - Class: 114
-      Script: {instanceID: 4208}
+      Script: {instanceID: 4198}
     - Class: 114
-      Script: {instanceID: 4408}
+      Script: {instanceID: 4398}
+    - Class: 114
+      Script: {instanceID: 19436}
+    - Class: 114
+      Script: {instanceID: 42450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -160,41 +165,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1474}
     - Class: 114
-      Script: {instanceID: 1476}
+      Script: {instanceID: 1708}
     - Class: 114
-      Script: {instanceID: 1712}
+      Script: {instanceID: 2122}
     - Class: 114
-      Script: {instanceID: 2126}
+      Script: {instanceID: 2326}
     - Class: 114
-      Script: {instanceID: 2332}
+      Script: {instanceID: 2496}
     - Class: 114
-      Script: {instanceID: 2504}
+      Script: {instanceID: 2644}
     - Class: 114
-      Script: {instanceID: 2652}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3040}
+      Script: {instanceID: 3138}
     - Class: 114
-      Script: {instanceID: 3490}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 3804}
+      Script: {instanceID: 3794}
     - Class: 114
-      Script: {instanceID: 4060}
+      Script: {instanceID: 4050}
     - Class: 114
-      Script: {instanceID: 4136}
+      Script: {instanceID: 4126}
     - Class: 114
-      Script: {instanceID: 4156}
+      Script: {instanceID: 4146}
     - Class: 114
-      Script: {instanceID: 4276}
+      Script: {instanceID: 4266}
     - Class: 114
-      Script: {instanceID: 4488}
+      Script: {instanceID: 4478}
     - Class: 114
-      Script: {instanceID: 4532}
+      Script: {instanceID: 4522}
     - Class: 114
-      Script: {instanceID: 4604}
+      Script: {instanceID: 4592}
     - Class: 114
-      Script: {instanceID: 5052}
+      Script: {instanceID: 5038}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -220,12 +225,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
-  - hash:
-      serializedVersion: 2
-      Hash: 69415240821be7986b27e72bf9609a30
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -357,12 +356,6 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Player
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
     className: GameTime
   - hash:
       serializedVersion: 2
@@ -468,6 +461,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 7c7211714ef8cb90cacc274d25175cf8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CaravanController
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -498,12 +497,6 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExitCity
-  - hash:
-      serializedVersion: 2
       Hash: ca3c715b2b37e6685a9585341fed70f3
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
@@ -514,6 +507,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 349d08daa6108b9a28f8c38fd40ce96f
@@ -604,12 +603,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioPlayableAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 2c7b65efb1ed8285b3879c5c2489f83d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SlotEvent
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -786,12 +779,6 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 064f0ae506098b4dd3f633221dc2eb30
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ItemGenerator
-  - hash:
-      serializedVersion: 2
       Hash: 19812d49440d9957b6d6b2a53f119975
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -820,12 +807,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteLibrarySourceAsset
-  - hash:
-      serializedVersion: 2
-      Hash: b8df289ee23823239d187e23d3367ebb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Cargo
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -862,6 +843,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 7e98b217dce75ff5b9d1836e152923b9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TavernController
   platform: 19
   scenePathNames:
   - Assets/Scenes/MapScene.unity

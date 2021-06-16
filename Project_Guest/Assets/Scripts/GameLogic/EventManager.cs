@@ -7,4 +7,5 @@ public class EventManager
 {
     public static readonly PlayerHasArrivedInTownEvent PlayerHasArrivedInTown = new PlayerHasArrivedInTownEvent();
     public static readonly DateChangedEvent DateChanged = new DateChangedEvent();
+    public static readonly OperationFailedEvent OperationFailed = new OperationFailedEvent();
 }

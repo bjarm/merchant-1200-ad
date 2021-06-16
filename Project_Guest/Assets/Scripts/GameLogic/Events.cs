@@ -25,6 +25,22 @@ namespace Events
 	{
 	}
 
+	public class OperationFailedEvent : AbsractEvent
+	{
+		private readonly List<Action<string>> callbacks = new List<Action<string>>();
+		
+		public void Subscribe(Action<string> callback)
+		{ 
+			callbacks.Add(callback);
+		}
+	
+		public void Publish(string reason)
+		{
+			foreach (Action<string> callback in callbacks)
+				callback(reason);
+		}
+	}
+
 	public class DateChangedEvent: AbsractEvent
 	{
 		private readonly List<Action<int>> callbacks = new List<Action<int>>();

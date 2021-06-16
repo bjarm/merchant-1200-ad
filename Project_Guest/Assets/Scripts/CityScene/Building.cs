@@ -22,6 +22,14 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
     public void OnPointerClick(PointerEventData eventData)
     {
         buildingDisplay.SetActive(true);
+
+        // Костыль-костылич для генерации списков по запрсу, а не в фоновом режиме
+        // Планируется убрать его после реорганизации (очередной) контроллеров и интерфейса в CityScene
+        if (gameObject.name == "Market")
+        {
+            GameObject.Find("Controllers").GetComponent<MarketController>().GenerateMarketList();
+        }
+        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
