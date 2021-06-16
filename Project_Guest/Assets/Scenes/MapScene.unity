@@ -534,6 +534,8 @@ GameObject:
   - component: {fileID: 278292360}
   - component: {fileID: 278292359}
   - component: {fileID: 278292361}
+  - component: {fileID: 278292362}
+  - component: {fileID: 278292363}
   m_Layer: 5
   m_Name: DrivingPanel
   m_TagString: Untagged
@@ -558,8 +560,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -40, y: 103}
-  m_SizeDelta: {x: 60, y: 75.1891}
+  m_AnchoredPosition: {x: -40, y: 47.1}
+  m_SizeDelta: {x: 60, y: 60.001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278292359
 MonoBehaviour:
@@ -625,6 +627,39 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!95 &278292362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278292357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f29334bc96469a749b5b2375b7933638, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &278292363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278292357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f0d2b4a80ba47419cb973b749294d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingButton: {fileID: 505368966}
+  drivingPanel: {fileID: 278292357}
 --- !u!1 &323819324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,10 +1294,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 575623106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a790fe68814ba342a171d679ffdd3d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f270a3619331f142b07725451658ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterObject: {fileID: 1422223728}
+  settingButton: {fileID: 505368966}
+  diaryButton: {fileID: 875752790}
+  drivingPanel: {fileID: 278292357}
+  exitButton: {fileID: 1032511545}
 --- !u!114 &575623109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,7 +1310,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 575623106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d00e5a44cd803fd45b04a3c3c53d3cb4, type: 3}
+  m_Script: {fileID: 11500000, guid: a057f79235a2c49488f0ce828ad4bd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 519420031}
@@ -1288,7 +1326,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 575623106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 628528659186ffa4da826062399484b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 327a7136f104dc64a892d91c6640e2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1422223728}
@@ -1302,12 +1340,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 575623106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48c30c61e2c19c409a16a53266c5ab9, type: 3}
+  m_Script: {fileID: 11500000, guid: 91ab124c212fabd47b1d0f9a1a68ce12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingButton: {fileID: 505368966}
-  diaryButton: {fileID: 875752790}
-  exitButton: {fileID: 1032511545}
+  characterObject: {fileID: 1422223728}
 --- !u!1 &718824104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,7 +1464,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 718824104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8561792c803e2743983ab99b72ea133, type: 3}
+  m_Script: {fileID: 11500000, guid: c24e49ab64da43b4585b33bd420fe345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &727004989
@@ -2077,7 +2113,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1089772491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ce8b4111e44c699e30af442b9b2c19, type: 3}
+  m_Script: {fileID: 11500000, guid: b44ad90bf46754344b70d6afbb793aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1168446005
@@ -2583,10 +2619,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1422223728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 184d2a68efd70e64189b0798391e8c85, type: 3}
+  m_Script: {fileID: 11500000, guid: dd830a72b397e7440a1df7b52662e0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: Riga
+  location: RIga
 --- !u!114 &1422223730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2596,11 +2632,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1422223728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90e450774bff25f468e1cc8cd71e56af, type: 3}
+  m_Script: {fileID: 11500000, guid: cbb8509a0ae717f42bb07e72a37b7695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
-  speed: 5
+  speed: 1
   maxDistance: 0.1
   onTheWay: 0
 --- !u!4 &1422223731
@@ -2660,7 +2696,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1428231874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8561792c803e2743983ab99b72ea133, type: 3}
+  m_Script: {fileID: 11500000, guid: c24e49ab64da43b4585b33bd420fe345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1428231877
