@@ -1,608 +1,33 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/ratatoskr/Documents/GitHub/merchant-1200-ad/Project_Guest/Packages/manifest.json
+    m_FilePath: C:/Users/Serjovka/Documents/GitHub/merchant-1200-ad/Project_Guest/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637571943641332725
-    m_Hash: 817896761
+      ticks: 637593393610018212
+    m_Hash: 455018041
   m_LockFileStatus:
-    m_FilePath: C:/Users/ratatoskr/Documents/GitHub/merchant-1200-ad/Project_Guest/Packages/packages-lock.json
+    m_FilePath: C:/Users/Serjovka/Documents/GitHub/merchant-1200-ad/Project_Guest/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637571943641592019
-    m_Hash: 213351214
+      ticks: 637593393924541806
+    m_Hash: 3021215987
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/ratatoskr/Documents/GitHub/merchant-1200-ad/Project_Guest/Packages
+m_ProjectPath: C:/Users/Serjovka/Documents/GitHub/merchant-1200-ad/Project_Guest/Packages
 m_EditorVersion: 2021.1.4f1 (4cd64a618c1b)
 m_ResolvedPackages:
-- packageId: com.unity.2d.animation@6.0.1
-  testable: 0
-  isDirectDependency: 1
-  version: 6.0.1
-  source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.2d.animation@6.0.1
-  assetPath: Packages/com.unity.2d.animation
-  name: com.unity.2d.animation
-  displayName: 2D Animation
-  author:
-    name: 
-    email: 
-    url: 
-  category: 2D
-  type: 
-  description: '2D Animation provides all the necessary tooling and runtime components
-    for skeletal animation using Sprites.
-
-
-    Documentation for v6.0 is currently
-    being updated.'
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.15-preview.1
-    - 1.0.15-preview.2
-    - 1.0.15-preview.3
-    - 1.0.15-preview.4
-    - 1.0.15-preview.5
-    - 1.0.16-preview
-    - 1.0.16-preview.1
-    - 1.0.16-preview.2
-    - 2.0.0-preview.1
-    - 2.0.0-preview.2
-    - 2.0.0-preview.3
-    - 2.1.0-preview.1
-    - 2.1.0-preview.2
-    - 2.1.0-preview.4
-    - 2.1.0-preview.5
-    - 2.1.0-preview.7
-    - 2.2.0-preview.1
-    - 2.2.0-preview.4
-    - 2.2.0-preview.5
-    - 2.2.1-preview.1
-    - 2.2.1-preview.2
-    - 3.0.2
-    - 3.0.3
-    - 3.0.4
-    - 3.0.5
-    - 3.0.6
-    - 3.0.8
-    - 3.1.0
-    - 3.1.1
-    - 3.2.1
-    - 3.2.2
-    - 3.2.3
-    - 3.2.4
-    - 3.2.5
-    - 3.2.6
-    - 4.0.0
-    - 4.0.1
-    - 4.1.0
-    - 4.1.1
-    - 4.2.1
-    - 4.2.2
-    - 4.2.3
-    - 4.2.4
-    - 4.2.5
-    - 4.2.6
-    - 4.2.8
-    - 5.0.0
-    - 5.0.1
-    - 5.0.2
-    - 5.0.3
-    - 5.0.4
-    - 5.0.5
-    - 6.0.0-pre.1
-    - 6.0.0-pre.2
-    - 6.0.1
-    - 6.0.3
-    compatible:
-    - 6.0.1
-    - 6.0.3
-    verified: 6.0.3
-  dependencies:
-  - name: com.unity.2d.common
-    version: 5.0.0
-  - name: com.unity.mathematics
-    version: 1.1.0
-  - name: com.unity.2d.sprite
-    version: 1.0.0
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.2d.common
-    version: 5.0.0
-  - name: com.unity.2d.sprite
-    version: 1.0.0
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.uielementsnative
-    version: 1.0.0
-  - name: com.unity.mathematics
-    version: 1.2.1
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  keywords:
-  - 2d
-  - animation
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hasRegistry: 1
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637526396800000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 1de540a091021db4de462f30f9a458120ea465ae
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-- packageId: com.unity.2d.pixel-perfect@5.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 5.0.0
-  source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.0
-  assetPath: Packages/com.unity.2d.pixel-perfect
-  name: com.unity.2d.pixel-perfect
-  displayName: 2D Pixel Perfect
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: 'The 2D Pixel Perfect package contains the Pixel Perfect Camera component
-    which ensures your pixel art remains crisp and clear at different resolutions,
-    and stable in motion.
-
-
-    It is a single component that makes all the calculations
-    needed to scale the viewport with resolution changes, removing the hassle from
-    the user. The user can adjust the definition of the pixel art rendered within
-    the camera viewport through the component settings, as well preview any changes
-    immediately in Game view by using the Run in Edit Mode feature.'
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview
-    - 1.0.1-preview
-    - 2.0.2
-    - 2.0.3
-    - 2.0.4
-    - 2.1.0
-    - 3.0.0
-    - 3.0.1
-    - 3.0.2
-    - 4.0.0
-    - 4.0.1
-    - 5.0.0-pre.1
-    - 5.0.0-pre.2
-    - 5.0.0
-    compatible:
-    - 5.0.0
-    verified: 5.0.0
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - pixel
-  - perfect
-  - 2D
-  - sprite
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hasRegistry: 1
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637526400420000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 82ee1598c2f1270bc1081c1f908364e528335bd5
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-- packageId: com.unity.2d.psdimporter@5.0.1
-  testable: 0
-  isDirectDependency: 1
-  version: 5.0.1
-  source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.2d.psdimporter@5.0.1
-  assetPath: Packages/com.unity.2d.psdimporter
-  name: com.unity.2d.psdimporter
-  displayName: 2D PSD Importer
-  author:
-    name: 
-    email: 
-    url: 
-  category: 2D
-  type: 
-  description: 'A ScriptedImporter for importing Adobe Photoshop PSB (Photoshop Big)
-    file format. The ScriptedImporter is currently targeted for users who wants to
-    create multi Sprite character animation using Unity 2D Animation Package.
-
-
-    Documentation
-    for v5.0 is currently being updated.'
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.1
-    - 1.0.0-preview.2
-    - 1.0.0-preview.3
-    - 1.0.0-preview.4
-    - 1.1.0-preview.1
-    - 1.1.0-preview.3
-    - 1.2.0-preview.1
-    - 1.2.0-preview.3
-    - 1.2.0-preview.4
-    - 2.0.2
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
-    - 2.0.7
-    - 2.1.0
-    - 2.1.3
-    - 2.1.4
-    - 2.1.5
-    - 2.1.6
-    - 3.0.0
-    - 3.1.1
-    - 3.1.3
-    - 3.1.4
-    - 3.1.5
-    - 3.1.6
-    - 3.1.7
-    - 4.0.0
-    - 4.0.1
-    - 4.0.2
-    - 5.0.0-pre.1
-    - 5.0.0-pre.2
-    - 5.0.1
-    - 5.0.3
-    compatible:
-    - 5.0.1
-    - 5.0.3
-    verified: 5.0.3
-  dependencies:
-  - name: com.unity.2d.common
-    version: 5.0.0
-  - name: com.unity.2d.animation
-    version: 6.0.1
-  - name: com.unity.2d.sprite
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.2d.common
-    version: 5.0.0
-  - name: com.unity.2d.sprite
-    version: 1.0.0
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.uielementsnative
-    version: 1.0.0
-  - name: com.unity.2d.animation
-    version: 6.0.1
-  - name: com.unity.mathematics
-    version: 1.2.1
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  keywords:
-  - 2d
-  - psdimporter
-  - assetimporter
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hasRegistry: 1
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637526398240000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 1de540a091021db4de462f30f9a458120ea465ae
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-- packageId: com.unity.2d.sprite@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.2d.sprite@1.0.0
-  assetPath: Packages/com.unity.2d.sprite
-  name: com.unity.2d.sprite
-  displayName: 2D Sprite
-  author:
-    name: 
-    email: 
-    url: 
-  category: 2D
-  type: 
-  description: Use Unity Sprite Editor Window to create and edit Sprite asset properties
-    like pivot, borders and Physics shape
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    verified: 1.0.0
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - 2d
-  - sprite
-  - sprite editor window
-  registry:
-    id: 
-    name: 
-    url: 
-    scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-- packageId: com.unity.2d.spriteshape@6.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 6.0.0
-  source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.2d.spriteshape@6.0.0
-  assetPath: Packages/com.unity.2d.spriteshape
-  name: com.unity.2d.spriteshape
-  displayName: 2D SpriteShape
-  author:
-    name: 
-    email: 
-    url: 
-  category: 2D
-  type: 
-  description: SpriteShape Runtime & Editor Package contains the tooling and the
-    runtime component that allows you to create very organic looking spline based
-    2D worlds. It comes with intuitive configurator and a highly performant renderer.
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.10-preview.2
-    - 1.0.11-preview
-    - 1.0.12-preview
-    - 1.0.12-preview.1
-    - 1.0.14-preview.2
-    - 2.0.0-preview.4
-    - 2.0.0-preview.5
-    - 2.0.0-preview.7
-    - 2.0.0-preview.8
-    - 2.0.0-preview.9
-    - 2.1.0-preview.2
-    - 2.1.0-preview.6
-    - 2.1.0-preview.7
-    - 2.1.0-preview.10
-    - 2.1.0-preview.11
-    - 3.0.1
-    - 3.0.2
-    - 3.0.4
-    - 3.0.5
-    - 3.0.6
-    - 3.0.7
-    - 3.0.8
-    - 3.0.9
-    - 3.0.10
-    - 3.0.11
-    - 3.0.12
-    - 3.0.13
-    - 3.0.14
-    - 3.0.15
-    - 4.0.0
-    - 4.0.1
-    - 4.0.2
-    - 4.0.3
-    - 4.1.0
-    - 4.1.1
-    - 4.1.2
-    - 4.1.3
-    - 4.1.4
-    - 4.1.5
-    - 5.0.0
-    - 5.0.1
-    - 5.0.2
-    - 5.1.0
-    - 5.1.1
-    - 5.1.2
-    - 6.0.0-pre.1
-    - 6.0.0-pre.2
-    - 6.0.0
-    compatible:
-    - 6.0.0
-    verified: 6.0.0
-  dependencies:
-  - name: com.unity.mathematics
-    version: 1.1.0
-  - name: com.unity.2d.common
-    version: 5.0.0
-  - name: com.unity.2d.path
-    version: 5.0.0
-  - name: com.unity.modules.physics2d
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.mathematics
-    version: 1.2.1
-  - name: com.unity.2d.common
-    version: 5.0.0
-  - name: com.unity.2d.sprite
-    version: 1.0.0
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.uielementsnative
-    version: 1.0.0
-  - name: com.unity.2d.path
-    version: 5.0.0
-  - name: com.unity.modules.physics2d
-    version: 1.0.0
-  keywords:
-  - 2d
-  - shape
-  - spriteshape
-  - smartsprite
-  - spline
-  - terrain2d
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hasRegistry: 1
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637526400040000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 82ee1598c2f1270bc1081c1f908364e528335bd5
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-- packageId: com.unity.2d.tilemap@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.2d.tilemap@1.0.0
-  assetPath: Packages/com.unity.2d.tilemap
-  name: com.unity.2d.tilemap
-  displayName: 2D Tilemap Editor
-  author:
-    name: 
-    email: 
-    url: 
-  category: 2D
-  type: 
-  description: 2D Tilemap Editor is a package that contains editor functionalities
-    for editing Tilemaps.
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    verified: 1.0.0
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - 2d
-  - Tilemap
-  registry:
-    id: 
-    name: 
-    url: 
-    scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
 - packageId: com.unity.collab-proxy@1.3.9
   testable: 0
   isDirectDependency: 1
   version: 1.3.9
   source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.collab-proxy@1.3.9
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.collab-proxy@1.3.9
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Collaborate
@@ -636,6 +61,7 @@ m_ResolvedPackages:
     - 1.3.7
     - 1.3.8
     - 1.3.9
+    - 1.4.9
     - 1.5.7
     - 2.0.0-preview.6
     - 2.0.0-preview.8
@@ -649,6 +75,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.6
     compatible:
     - 1.3.9
+    - 1.4.9
     - 1.5.7
     - 2.0.0-preview.6
     - 2.0.0-preview.8
@@ -697,12 +124,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 
     nextVersion: 
-- packageId: com.unity.ide.rider@3.0.6
+- packageId: com.unity.ide.rider@3.0.5
   testable: 0
   isDirectDependency: 1
-  version: 3.0.6
+  version: 3.0.5
   source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ide.rider@3.0.6
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ide.rider@3.0.5
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -743,16 +170,14 @@ m_ResolvedPackages:
     - 3.0.4
     - 3.0.5
     - 3.0.6
+    - 3.0.7
     compatible:
     - 3.0.5
     - 3.0.6
-    verified: 3.0.6
-  dependencies:
-  - name: com.unity.ext.nunit
-    version: 1.0.6
-  resolvedDependencies:
-  - name: com.unity.ext.nunit
-    version: 1.0.6
+    - 3.0.7
+    verified: 3.0.7
+  dependencies: []
+  resolvedDependencies: []
   keywords: []
   registry:
     id: main
@@ -766,13 +191,13 @@ m_ResolvedPackages:
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637545389350000000
+  datePublishedTicks: 637502896060000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: 0be4afe0ac726df5939a6ce50f8b7575968c5d6f
+    revision: c84d2b08574326cd1e40dcae5378c556c6aecad8
     path: 
   unityLifecycle:
     version: 
@@ -782,7 +207,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.7
   source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ide.visualstudio@2.0.7
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ide.visualstudio@2.0.7
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -812,10 +237,12 @@ m_ResolvedPackages:
     - 2.0.5
     - 2.0.7
     - 2.0.8
+    - 2.0.9
     compatible:
     - 2.0.7
     - 2.0.8
-    verified: 2.0.8
+    - 2.0.9
+    verified: 2.0.9
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
@@ -857,7 +284,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.2.3
   source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ide.vscode@1.2.3
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ide.vscode@1.2.3
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -919,7 +346,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.1.24
   source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.test-framework@1.1.24
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.test-framework@1.1.24
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -962,9 +389,11 @@ m_ResolvedPackages:
     - 1.1.20
     - 1.1.22
     - 1.1.24
+    - 1.1.26
     compatible:
     - 1.1.24
-    verified: 1.1.24
+    - 1.1.26
+    verified: 1.1.26
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -1010,7 +439,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.4
   source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.textmeshpro@3.0.4
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.textmeshpro@3.0.4
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -1169,7 +598,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.5.4
   source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.timeline@1.5.4
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.timeline@1.5.4
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1307,7 +736,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ugui@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ugui@1.0.0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1367,12 +796,114 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 
     nextVersion: 
+- packageId: com.unity.visualscripting@1.5.2
+  testable: 0
+  isDirectDependency: 1
+  version: 1.5.2
+  source: 1
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.visualscripting@1.5.2
+  assetPath: Packages/com.unity.visualscripting
+  name: com.unity.visualscripting
+  displayName: Visual Scripting
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: "Visual Scripting, previously known as BOLT, is an alternative workflow
+    to design behaviours. Instead of the classic method of writing a C# script, visual
+    scripting offers a way to design behaviours intuitively without code, by connecting
+    events, actions, and data together in a graph. \n\nBoth programmers and non-programmers
+    can use node-based graphs to design final logic or to quickly create prototypes.
+    This package also features an API that programmers can use for more advanced
+    tasks, or to create custom nodes that can be used by other team members."
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.5.0
+    - 1.5.1-pre.3
+    - 1.5.1-pre.5
+    - 1.5.1
+    - 1.5.2
+    - 1.6.0-pre.3
+    - 1.6.0
+    - 1.6.1
+    - 1.7.1
+    - 1.7.2
+    compatible:
+    - 1.5.2
+    - 1.6.0-pre.3
+    - 1.6.0
+    - 1.6.1
+    - 1.7.1
+    - 1.7.2
+    verified: 1.5.2
+  dependencies:
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ai
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.particlesystem
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.physics2d
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.ai
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.particlesystem
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.physics2d
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
+  hideInEditor: 1
+  entitlements:
+    isAllowed: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637509974430000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
+    revision: 49dd7fc937ed1aff82fd8e8a624ba671cc83f6e5
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.ai@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.ai@1.0.0
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1423,7 +954,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.androidjni@1.0.0
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1473,7 +1004,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.animation@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.animation@1.0.0
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1524,7 +1055,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -1575,7 +1106,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.audio@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.audio@1.0.0
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -1626,7 +1157,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.cloth@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.cloth@1.0.0
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -1681,7 +1212,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.director@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.director@1.0.0
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -1740,7 +1271,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -1792,7 +1323,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.imgui@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.imgui@1.0.0
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -1843,7 +1374,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -1894,7 +1425,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -1945,7 +1476,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.physics@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.physics@1.0.0
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -1996,7 +1527,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.physics2d@1.0.0
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2047,7 +1578,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.screencapture@1.0.0
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2102,7 +1633,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.terrain@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.terrain@1.0.0
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -2153,7 +1684,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -2212,7 +1743,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.tilemap@1.0.0
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -2266,7 +1797,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.ui@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.ui@1.0.0
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -2317,7 +1848,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.uielements@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.uielements@1.0.0
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -2384,7 +1915,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.umbra@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.umbra@1.0.0
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -2435,7 +1966,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -2494,7 +2025,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -2545,7 +2076,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -2604,7 +2135,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -2663,7 +2194,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -2722,7 +2253,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -2797,7 +2328,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.vehicles@1.0.0
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -2852,7 +2383,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.video@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.video@1.0.0
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -2915,7 +2446,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.vr@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.vr@1.0.0
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -2980,7 +2511,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.wind@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.wind@1.0.0
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -3031,7 +2562,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.xr@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.xr@1.0.0
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -3094,7 +2625,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.subsystems@1.0.0
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -3149,7 +2680,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
   assetPath: Packages/com.unity.modules.uielementsnative
   name: com.unity.modules.uielementsnative
   displayName: UIElements Native
@@ -3211,7 +2742,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.6
   source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ext.nunit@1.0.6
+  resolvedPath: C:\Users\Serjovka\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.ext.nunit@1.0.6
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -3227,11 +2758,6 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 0.1.5-preview
-    - 0.1.6-preview
-    - 0.1.9-preview
-    - 1.0.0
-    - 1.0.5
     - 1.0.6
     compatible:
     - 1.0.6
@@ -3254,233 +2780,13 @@ m_ResolvedPackages:
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637429759280000000
+  datePublishedTicks: 0
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
     revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-- packageId: com.unity.mathematics@1.2.1
-  testable: 0
-  isDirectDependency: 0
-  version: 1.2.1
-  source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.mathematics@1.2.1
-  assetPath: Packages/com.unity.mathematics
-  name: com.unity.mathematics
-  displayName: Mathematics
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: Unity's C# SIMD math library providing vector types and math functions
-    with a shader like syntax.
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 0.0.12-preview.2
-    - 0.0.12-preview.5
-    - 0.0.12-preview.8
-    - 0.0.12-preview.10
-    - 0.0.12-preview.11
-    - 0.0.12-preview.13
-    - 0.0.12-preview.17
-    - 0.0.12-preview.19
-    - 0.0.12-preview.20
-    - 1.0.0-preview.1
-    - 1.0.1
-    - 1.1.0-preview.1
-    - 1.1.0
-    - 1.2.1
-    compatible:
-    - 1.2.1
-    verified: 1.2.1
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - unity
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hasRegistry: 1
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637324062630000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: git+https://github.com/Unity-Technologies/Unity.Mathematics.git
-    revision: 71412d94b7a0b0fdbb3195a5e6559bf6a761e91a
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-- packageId: com.unity.2d.common@5.0.0
-  testable: 0
-  isDirectDependency: 0
-  version: 5.0.0
-  source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.2d.common@5.0.0
-  assetPath: Packages/com.unity.2d.common
-  name: com.unity.2d.common
-  displayName: 2D Common
-  author:
-    name: 
-    email: 
-    url: 
-  category: 2D
-  type: 
-  description: 2D Common is a package that contains shared functionalities that are
-    used by most of the other 2D packages.
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.9-preview.1
-    - 1.0.9-preview.2
-    - 1.0.10-preview
-    - 1.0.11-preview.1
-    - 1.1.0-preview.1
-    - 1.1.0-preview.2
-    - 1.2.0-preview.1
-    - 2.0.1
-    - 2.0.2
-    - 2.1.0
-    - 3.0.0
-    - 3.0.1
-    - 4.0.0
-    - 4.0.1
-    - 4.0.2
-    - 4.0.3
-    - 5.0.0-pre.1
-    - 5.0.0-pre.2
-    - 5.0.0
-    compatible:
-    - 5.0.0
-    verified: 5.0.0
-  dependencies:
-  - name: com.unity.2d.sprite
-    version: 1.0.0
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.2d.sprite
-    version: 1.0.0
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.uielementsnative
-    version: 1.0.0
-  keywords:
-  - 2d
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hasRegistry: 1
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637526395060000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 82ee1598c2f1270bc1081c1f908364e528335bd5
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-- packageId: com.unity.2d.path@5.0.0
-  testable: 0
-  isDirectDependency: 0
-  version: 5.0.0
-  source: 1
-  resolvedPath: C:\Users\ratatoskr\Documents\GitHub\merchant-1200-ad\Project_Guest\Library\PackageCache\com.unity.2d.path@5.0.0
-  assetPath: Packages/com.unity.2d.path
-  name: com.unity.2d.path
-  displayName: 2D Path
-  author:
-    name: 
-    email: 
-    url: 
-  category: 2D
-  type: 
-  description: "2D Path provides tooling to edit shapes (polygons and B\xE9zier splines)
-    in EditorWindows and the SceneView."
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.1
-    - 1.0.0-preview.4
-    - 2.0.1
-    - 2.0.2
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
-    - 2.0.6
-    - 2.1.0
-    - 3.0.0
-    - 3.0.1
-    - 3.0.2
-    - 4.0.0
-    - 4.0.1
-    - 5.0.0-pre.1
-    - 5.0.0-pre.2
-    - 5.0.0
-    compatible:
-    - 5.0.0
-    verified: 5.0.0
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - 2d
-  - path
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hasRegistry: 1
-  hideInEditor: 1
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637526399200000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 82ee1598c2f1270bc1081c1f908364e528335bd5
     path: 
   unityLifecycle:
     version: 

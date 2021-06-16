@@ -50,7 +50,10 @@ public class City : MonoBehaviour
 	{
 		if (Input.GetMouseButtonDown(1) && mouse == true)
 		{
-			GameObject.Find("Controllers").GetComponent<MovementController>().GoToCity(this);
+			if (DataBase.GetPathLengthInDays(GameManager.currentCity.cityName, cityName) != 0)
+			{
+				GameObject.Find("Controllers").GetComponent<MovementController>().GoToCity(this);
+			}
 		}
 	}
 
