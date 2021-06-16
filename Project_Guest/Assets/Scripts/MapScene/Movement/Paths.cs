@@ -6,15 +6,22 @@ using System;
 public class Paths
 {
     Dictionary<Tuple<string, string>, List<Tuple<double, double>>> allWays = new Dictionary<Tuple<string, string>, List<Tuple<double, double>>>();
-    List<String> cities = new List<string>{ "Novgorod", "Riga", "Toropets" };
+    List<String> cities = new List<string>{ "Novgorod", "Riga", "Toropets", "Pskov", "Polotsk", "Vitebsk" };
     public Paths() 
     {
-        addPath("Novgorod", "Riga", pushPointToPath(2.43, 1.8, 0.6, 0.33, -1.13, -3.45, -2.58, -4.36, -4.44, -4.08, -6.48, -6.12, -8.4, -6.65, - 10.93, -5.29));
-        addPath("Riga", "Novgorod", pushPointToPath(-10.93, -5.29, -8.4, -6.65, -6.48, -6.12, -4.44, -4.08, -2.58, -4.36, -1.13, -3.45, 0.6, 0.33, 2.43, 1.8));
-        addPath("Riga", "Toropets", pushPointToPath(-10.93, -5.29, -8.51, -6.72, -4.94, -5.48, -2.95, -7.11, -1.6, -9.07, 2.28, -9.27, 3.49, -7.9, 4.19, -6.33));
-        addPath("Toropets", "Riga", pushPointToPath(4.19, -6.33, 3.49, -7.9, 2.28, -9.27, -1.6, -9.07, -2.95, -7.11, -4.94, -5.48, -8.51, -6.72, -10.93, -5.29));
-        addPath("Toropets", "Novgorod", pushPointToPath(4.19, -6.33, 3.09, -7.52, 1.05, -6.65, 2.0, -4.4, -0.99, -3.63, -0.56, -1.21, 0.97, 0.68, 2.43, 1.8));
-        addPath("Novgorod", "Toropets", pushPointToPath(2.43, 1.8, 0.97, 0.68, -0.56, -1.21, -0.99, -3.63, 2.0, -4.4, 1.05, -6.65, 3.09, -7.52, 4.19, -6.33));
+        addPath("Novgorod", "Pskov", pushPointToPath(2.43, 1.8, 1.32, 0.85, 0.42, 0.01, -0.43, -0.84, -0.86, -2.06, -0.59, -3.27, -1.2, -3.44, -2.19, -2.94));
+        addPath("Pskov", "Novgorod", pushPointToPath(-2.19, -2.94, -1.2, -3.44, -0.59, -3.27, -0.86, -2.06, -0.43, -0.84, 0.42, 0.01, 1.32, 0.85, 2.43, 1.8));
+        addPath("Pskov", "Riga", pushPointToPath(-2.19, -2.94, -1.15, -3.51, -2.48, -4.32, -4.3, -3.93, -4.72, -5.43, -7.16, -6.45, -10.12, -6.68, -10.93, -5.29));
+        addPath("Riga", "Pskov", pushPointToPath(-10.93, -5.29, -10.12, -6.68, -7.16, -6.45, -4.72, -5.43, -4.3, -3.93, -2.48, -4.32, -1.15, -3.51, -2.19, -2.94));
+        addPath("Pskov", "Polotsk", pushPointToPath(-2.19, -2.94, -1.15, -3.51, 0.28, -4.52, 2.18, -4.38, 0.96, -6.34, -0.03, -7.86, -1.83, -9.24, -2.75, -9.86));
+        addPath("Polotsk", "Pskov", pushPointToPath(-2.75, -9.86, -1.83, -9.24, -0.03, -7.86, 0.96, -6.34, 2.18, -4.38, 0.28, -4.52, -1.15, -3.51, -2.19, -2.94));
+        addPath("Polotsk", "Toropets", pushPointToPath(-2.75, -9.86, -0.97, -8.89, 2.74, -9.21, 3.34, -8.74, 5.6, -9.43, 6.49, -7.61, 5.57, -7.06, 4.19, -6.33));
+        addPath("Toropets", "Polotsk", pushPointToPath(4.19, -6.33, 5.57, -7.06, 6.49, -7.61, 5.6, -9.43, 3.34, -8.74, 2.74, -9.21, -0.97, -8.89, -2.75, -9.86));
+        addPath("Polotsk", "Vitebsk", pushPointToPath(-2.75, -9.86, -0.97, -8.89, 2.74, -9.21, 3.34, -8.74, 5.6, -9.43, 6.38, -10.11, 5.46, -11.78, 2.88, -11.94));
+        addPath("Vitebsk", "Polotsk", pushPointToPath(2.88, -11.94, 5.46, -11.78, 6.38, -10.11, 5.6, -9.43, 3.34, -8.74, 2.74, -9.21, -0.97, -8.89, -2.75, -9.86));
+        addPath("Toropets", "Vitebsk", pushPointToPath(4.19, -6.33, 5.5, -6.99, 6.4, -7.52, 6.17, -8.41, 5.6, -9.43, 6.38, -10.11, 5.46, -11.78, 2.88, -11.94));
+        addPath("Vitebsk", "Toropets", pushPointToPath(2.88, -11.94, 5.46, -11.78, 6.38, -10.11, 5.6, -9.43, 6.17, -8.41, 6.4, -7.52, 5.5, -6.99, 4.19, -6.33));
+        
     }
     private void addPath(string city1, string city2, List<Tuple<double, double>> path) 
     {
@@ -39,13 +46,13 @@ public class Paths
 
     public List<Tuple<double, double>> getWay(string city1, string city2)
     {
-        if (cities.Contains(city1) && cities.Contains(city2))
+        if (allWays.ContainsKey(new Tuple<string, string>(city1, city2)))
         {
             return allWays[new Tuple<string, string>(city1, city2)];
         }
         else 
         {
-            return null;
+            return new List<Tuple<double, double>>();
         }
     }
 }
