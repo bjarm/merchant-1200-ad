@@ -1,0 +1,10 @@
+{
+  "listOfGoods": {
+    "Bread": 100,
+    "Fur": 150,
+    "Salt": 100,
+    "Wine": 150,
+    "Herring": 100
+  },
+  "gold": 100
+}

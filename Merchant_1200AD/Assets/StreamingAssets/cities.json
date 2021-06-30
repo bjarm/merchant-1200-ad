@@ -1,0 +1,104 @@
+{
+  "Novgorod": 
+  {
+    "name": "Novgorod",
+    "listOfGoods": {
+      "Bread": 100,
+      "Fur": 150,
+      "Salt": 100,
+      "Wine": 150,
+      "Herring": 100
+    },
+    "gold": 100,
+    "population": 50,
+    "listOfRoads": {
+      "Pskov": 2
+    }
+  },
+  "Riga":
+  {
+    "name": "Riga",
+    "listOfGoods": {
+      "Bread": 50,
+      "Fur": 50,
+      "Salt": 150,
+      "Wine": 150,
+      "Herring": 150
+    },
+    "gold": 100,
+    "population": 35,
+    "listOfRoads": {
+      "Pskov": 3
+    }
+  },
+  "Toropets":
+  {
+    "name": "Toropets",
+    "listOfGoods": {
+      "Bread": 100,
+      "Fur": 100,
+      "Salt": 100,
+      "Wine": 50,
+      "Herring": 50
+    },
+    "gold": 100,
+    "population": 30,
+    "listOfRoads": {
+      "Polotsk": 3,
+      "Vitebsk": 2
+    }
+  },
+  "Pskov":
+  {
+    "name": "Pskov",
+    "listOfGoods": {
+      "Bread": 50,
+      "Fur": 100,
+      "Salt": 50,
+      "Wine": 50,
+      "Herring": 100
+    },
+    "gold": 100,
+    "population": 40,
+    "listOfRoads": {
+      "Riga": 3,
+      "Polotsk": 3,
+      "Novgorod": 2
+    }
+  },
+  "Polotsk":
+  {
+    "name": "Polotsk",
+    "listOfGoods": {
+      "Bread": 150,
+      "Fur": 100,
+      "Salt": 50,
+      "Wine": 50,
+      "Herring": 50
+    },
+    "gold": 100,
+    "population": 35,
+    "listOfRoads": {
+      "Toropets": 3,
+      "Pskov": 3,
+      "Vitebsk": 3
+    }
+  },
+  "Vitebsk":
+  {
+    "name": "Vitebsk",
+    "listOfGoods": {
+      "Bread": 150,
+      "Fur": 50,
+      "Salt": 50,
+      "Wine": 100,
+      "Herring": 50
+    },
+    "gold": 100,
+    "population": 30,
+    "listOfRoads": {
+      "Polotsk": 3,
+      "Toropets": 2
+    }
+  }
+}

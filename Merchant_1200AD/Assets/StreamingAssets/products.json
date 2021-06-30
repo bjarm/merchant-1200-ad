@@ -1,0 +1,37 @@
+{
+  "Bread": 
+  {
+    "nominalPrice": 20.0,
+    "necessity": 0.90,
+    "consumption": 0.40,
+    "productionAmount": 20
+  },
+  "Fur":
+  {
+    "nominalPrice": 50.0,
+    "necessity": 0.90,
+    "consumption": 0.40,
+    "productionAmount": 20
+  },
+  "Salt":
+  {
+    "nominalPrice": 30.0,
+    "necessity": 0.90,
+    "consumption": 0.40,
+    "productionAmount": 20
+  },
+  "Wine":
+  {
+    "nominalPrice": 25.0,
+    "necessity": 0.90,
+    "consumption": 0.40,
+    "productionAmount": 20
+  },
+  "Herring":
+  {
+    "nominalPrice": 10.0,
+    "necessity": 0.90,
+    "consumption": 0.40,
+    "productionAmount": 20
+  }
+}
